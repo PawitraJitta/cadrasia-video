@@ -1,0 +1,392 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>CADRASIA Interview Guideline - Syngenta</title>
+<link href="https://fonts.googleapis.com/css2?family=Sarabun:wght@400;600;700;800&family=Prompt:wght@700;800;900&display=swap" rel="stylesheet">
+<style>
+* { margin:0; padding:0; box-sizing:border-box; }
+body {
+  font-family: 'Sarabun', sans-serif;
+  background: #dce8f5;
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  padding: 28px 16px;
+}
+.artwork {
+  width: 620px;
+  background: #fff;
+  border-radius: 20px;
+  overflow: hidden;
+  box-shadow: 0 16px 60px rgba(0,72,150,0.18), 0 4px 16px rgba(0,0,0,0.08);
+}
+
+/* HEADER */
+.header { background: #004896; position: relative; overflow: hidden; }
+.header-top {
+  background: linear-gradient(120deg, #002d6b 0%, #004896 45%, #005cb8 100%);
+  padding: 20px 28px 0; position: relative;
+}
+.header-top::before {
+  content:''; position:absolute; top:-60px; right:-60px;
+  width:220px; height:220px; border-radius:50%;
+  background:rgba(0,154,102,0.15);
+}
+.logo-bar {
+  display:flex; justify-content:space-between; align-items:center; margin-bottom:16px;
+}
+.logo-bar img { height:26px; }
+.campaign-tag {
+  background:rgba(0,154,102,0.25); border:1px solid rgba(0,154,102,0.5);
+  color:#7FCA3F; font-size:10px; font-weight:700;
+  letter-spacing:1.2px; padding:4px 12px; border-radius:20px; text-transform:uppercase;
+}
+.header-hero { position:relative; z-index:1; padding-bottom:20px; }
+.product-label { font-size:10px; font-weight:700; color:rgba(255,255,255,0.5); letter-spacing:2px; text-transform:uppercase; margin-bottom:3px; }
+.product-name { font-family:'Prompt',sans-serif; font-size:38px; font-weight:900; line-height:1; color:#fff; letter-spacing:-1px; }
+.product-name span { color:#7FCA3F; }
+.header-desc { font-size:12.5px; color:rgba(255,255,255,0.75); margin-top:6px; line-height:1.5; max-width:380px; }
+.header-accent {
+  background:#009A66; padding:9px 28px;
+  display:flex; justify-content:space-between; align-items:center;
+}
+.accent-left { font-size:11.5px; font-weight:700; color:#fff; }
+.reward-chips { display:flex; gap:8px; }
+.reward-chip {
+  background:rgba(255,255,255,0.2); color:#fff;
+  font-size:11px; font-weight:700; padding:4px 12px;
+  border-radius:20px; border:1px solid rgba(255,255,255,0.3);
+}
+.divider-strip { height:4px; background:linear-gradient(90deg,#7FCA3F 0%,#009A66 50%,#004896 100%); }
+
+/* SECTIONS */
+.section { padding:13px 22px; border-bottom:1px solid #eef0f4; }
+.sec-title {
+  font-size:10.5px; font-weight:800; color:#004896;
+  letter-spacing:1.2px; text-transform:uppercase;
+  margin-bottom:9px; display:flex; align-items:center; gap:7px;
+}
+.sec-title::before { content:''; display:inline-block; width:10px; height:10px; background:#7FCA3F; border-radius:2px; flex-shrink:0; }
+
+/* OBJECTIVE */
+.obj-row { display:grid; grid-template-columns:1fr 1fr 1fr; gap:7px; margin-bottom:9px; }
+.obj-card {
+  background:linear-gradient(145deg,#f0f7e6,#e8f4fd); border-radius:10px;
+  padding:10px 8px; text-align:center; border-top:3px solid #7FCA3F;
+}
+.obj-icon { font-size:20px; margin-bottom:4px; }
+.obj-label { font-size:11px; font-weight:700; color:#004896; line-height:1.35; }
+.reward-row { display:flex; gap:8px; flex-wrap:wrap; }
+.reward-badge {
+  display:inline-flex; align-items:center; gap:5px;
+  background:linear-gradient(135deg,#ff8f00,#f57c00);
+  color:#fff; font-size:11.5px; font-weight:700;
+  padding:5px 14px; border-radius:20px;
+  box-shadow:0 2px 8px rgba(255,143,0,0.3);
+}
+
+/* PHOTO */
+.photo-row { display:grid; grid-template-columns:repeat(3,1fr); gap:7px; }
+.photo-card {
+  background:#f8fcf4; border:1.5px solid #d4edbc;
+  border-radius:10px; padding:9px 7px; text-align:center; position:relative;
+}
+.photo-num { position:absolute; top:5px; left:7px; font-size:8.5px; font-weight:800; color:#009A66; }
+.photo-icon { font-size:18px; margin:4px 0 3px; }
+.photo-label { font-size:10px; font-weight:700; color:#1b4d2e; line-height:1.35; }
+.alert-box {
+  margin-top:8px; background:#fff8e1; border-left:4px solid #ffa000;
+  border-radius:0 8px 8px 0; padding:7px 11px; font-size:10.5px; color:#6d4c00; line-height:1.5;
+}
+
+/* TIMELINE */
+.tl-wrap { display:flex; align-items:flex-start; }
+.tl-item { flex:1; text-align:center; position:relative; }
+.tl-item:not(:last-child)::after {
+  content:''; position:absolute; top:14px; left:50%;
+  width:100%; height:2px;
+  background:linear-gradient(90deg,#7FCA3F,#004896); z-index:0;
+}
+.tl-node {
+  width:30px; height:30px; border-radius:50%;
+  border:2.5px solid #7FCA3F; background:#fff;
+  display:flex; align-items:center; justify-content:center;
+  font-size:9.5px; font-weight:800; color:#004896;
+  margin:0 auto 5px; position:relative; z-index:1;
+}
+.tl-node.hi { background:#004896; border-color:#004896; color:#fff; }
+.tl-label { font-size:9.5px; color:#555; font-weight:600; line-height:1.3; }
+
+/* KEY MESSAGES */
+.key-grid { display:grid; grid-template-columns:1fr 1fr; gap:7px; }
+.key-card {
+  display:flex; align-items:flex-start; gap:8px;
+  background:#f7f9ff; border-radius:10px; padding:9px 10px; border-left:4px solid #004896;
+}
+.key-pill {
+  background:#004896; color:#fff; font-size:9px; font-weight:800;
+  padding:3px 7px; border-radius:4px; white-space:nowrap; margin-top:1px;
+  min-width:48px; text-align:center; flex-shrink:0;
+}
+.key-pill.g { background:#009A66; }
+.key-pill.t { background:#00796b; }
+.key-pill.o { background:#e65100; }
+.key-text { font-size:11px; color:#333; line-height:1.45; }
+.key-text strong { color:#004896; font-weight:700; }
+
+/* FILMING */
+.film-grid { display:grid; grid-template-columns:1fr 1fr; gap:6px; }
+.film-item {
+  display:flex; align-items:flex-start; gap:7px;
+  background:#f0f7ff; border-radius:8px; padding:8px 10px;
+  font-size:11px; color:#334; line-height:1.4;
+}
+.film-item.warn { background:#fff3f3; }
+.film-ico { font-size:14px; flex-shrink:0; margin-top:1px; }
+
+/* PLOT TABLE */
+.plot-table { width:100%; border-collapse:collapse; font-size:10.5px; }
+.plot-table th {
+  background:#004896; color:#fff; font-weight:700;
+  padding:7px 10px; text-align:left; font-size:10px;
+}
+.plot-table th:first-child { background:#003370; }
+.plot-table td { padding:7px 10px; vertical-align:top; border-bottom:1px solid #eef0f4; line-height:1.45; }
+.plot-table tr:nth-child(even) td { background:#f7f9ff; }
+.plot-table .tag-all { background:#e8f5e9; color:#1b5e20; font-weight:700; font-size:9.5px; padding:2px 7px; border-radius:10px; display:inline-block; }
+.plot-table .tag-sel { background:#e3f2fd; color:#0d47a1; font-weight:700; font-size:9.5px; padding:2px 7px; border-radius:10px; display:inline-block; }
+.plot-table .note-red { color:#c62828; font-size:9.5px; font-weight:600; }
+.plot-section-title {
+  background:#f0f4fa; padding:6px 10px;
+  font-size:10px; font-weight:800; color:#004896;
+  border-left:4px solid #7FCA3F; margin-bottom:2px;
+}
+
+/* QUESTION CARDS */
+.q-block { margin-bottom:8px; }
+.q-topic {
+  display:inline-block; background:#7FCA3F; color:#fff;
+  font-size:9.5px; font-weight:800; padding:3px 10px; border-radius:4px;
+  margin-bottom:6px; letter-spacing:0.5px;
+}
+.q-topic.blue { background:#004896; }
+.q-topic.teal { background:#009A66; }
+.q-topic.orange { background:#e65100; }
+.q-item {
+  background:#fafbff; border-radius:8px; padding:8px 11px;
+  border-left:3px solid #004896; margin-bottom:5px; font-size:11px; line-height:1.55;
+}
+.q-item strong { color:#004896; font-weight:700; }
+.q-item .q-intent { font-size:10px; color:#777; margin-top:3px; font-style:italic; }
+
+/* COLLECTION */
+.collect-row { display:grid; grid-template-columns:1fr 1fr; gap:8px; }
+.collect-card { background:#f4f6fa; border-radius:10px; padding:10px 12px; border-top:3px solid #004896; }
+.collect-title { font-size:10px; font-weight:800; color:#004896; margin-bottom:5px; }
+.code-tag {
+  display:inline-block; background:#e8f5e9; color:#1b5e20;
+  font-family:'Courier New',monospace; font-size:9.5px;
+  padding:2px 6px; border-radius:4px; margin:1px 0; line-height:1.8;
+}
+.collect-note { margin-top:7px; font-size:10px; color:#666; line-height:1.5; }
+
+/* FOOTER */
+.footer {
+  background:linear-gradient(135deg,#002d6b,#004896);
+  padding:14px 24px; display:flex; justify-content:space-between; align-items:center;
+}
+.footer-left { color:rgba(255,255,255,0.65); font-size:10px; line-height:1.7; }
+.footer-left strong { color:#7FCA3F; font-size:11px; }
+.footer-logo img { height:22px; opacity:0.9; }
+</style>
+</head>
+<body>
+<div class="artwork">
+
+<!-- HEADER -->
+<div class="header">
+  <div class="header-top">
+    <div class="logo-bar">
+      <img src="data:image/svg+xml;base64,PHN2ZyB2aWV3Qm94PSIwIDAgNDYyLjYxIDEzOC4zNiIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIiB4bWxuczp4bGluaz0iaHR0cDovL3d3dy53My5vcmcvMTk5OS94bGluayIgaWQ9ImEiIG92ZXJmbG93PSJoaWRkZW4iPjxzdHlsZT4NCi5Nc2Z0T2ZjVGhtX0JhY2tncm91bmQxX0ZpbGxfdjIgew0KIGZpbGw6I0ZGRkZGRjsgDQp9DQo8L3N0eWxlPg0KPGRlZnM+PC9kZWZzPjxwYXRoIGQ9Ik00MDcuNjYgNjAuNSAzOTEuOTUgNjAuNSAzOTEuOTUgODYuNTFDMzkxLjk1IDkzLjkyIDM5NS44NSA5NS4yOSA0MDAuOSA5NS4yOSA0MDIuNjYgOTUuMjkgNDA0LjU2IDk1LjA0IDQwNi40NyA5NC43OEw0MDcuNjYgMTA2LjQ0QzQwMy41NSAxMDcuMTcgMzk4LjA1IDEwNy43OSAzOTQuNDggMTA3Ljc5IDM4My42NiAxMDcuNzkgMzc0LjA1IDEwNC4wMSAzNzQuMDUgOTAuNzNMMzc0LjA1IDYwLjUgMzY0LjkzIDYwLjUgMzY0LjkzIDQ5LjAxIDM3NC4wNSA0OS4wMSAzNzQuMDUgMzYuMzUgMzkxLjk1IDMxLjI4IDM5MS45NSA0OS4wMSA0MDcuNjYgNDkuMDEgNDA3LjY2IDYwLjUiIGNsYXNzPSJNc2Z0T2ZjVGhtX0JhY2tncm91bmQxX0ZpbGxfdjIiIGZpbGw9IiNGRkZGRkYiLz48cGF0aCBkPSJNMzU5LjQ4IDEwNi42MSAzNDEuNTcgMTA2LjYxIDM0MS41NyA2OS42MkMzNDEuNTcgNjQuMTggMzM5LjI4IDYxLjE3IDMzMy4xMyA2MS4xNyAzMjguNSA2MS4xNyAzMjUuNSA2My40IDMyMi4xNiA2Ni4wN0wzMjIuMTYgMTA2LjYgMzA0LjI1IDEwNi42IDMwNC4yNSA0OS4wMSAzMjEuNjUgNDkuMDEgMzIxLjY1IDU0LjA4QzMyNy40OSA1MC4xNiAzMzQuMTcgNDcuNjYgMzQxLjQxIDQ3LjY2IDM1Mi44MyA0Ny42NiAzNTkuNDggNTQuNzYgMzU5LjQ4IDY1LjU2TDM1OS40OCAxMDYuNiIgY2xhc3M9Ik1zZnRPZmNUaG1fQmFja2dyb3VuZDFfRmlsbF92MiIgZmlsbD0iI0ZGRkZGRiIvPjxwYXRoIGQ9Ik0yNjguMTMgMEMyNTkuMDcgMTUuMzUgMjYzLjAxIDI5LjI1IDI1NC4xNSAzOC4xIDI0Ny4wMyA0NS4yMiAyNDAuNDQgNDQuOTkgMjMyLjY4IDQ0Ljk5IDIyOS45OCA0NC45OSAyMjQuNzQgNDUuMjIgMjIyLjU0IDQ2LjgxIDIyMS4yNyA0Mi43NSAyMjAuNzIgMzguMjkgMjIwLjcyIDM0LjA0IDIyMC43MiAyNi43MyAyMjIuMzYgMjAuMjMgMjI3LjYyIDE0Ljk4IDIzNy42OCA0LjkyIDI1NS45IDEuNzMgMjY4LjE0LTAuMDIiIGNsYXNzPSJNc2Z0T2ZjVGhtX0JhY2tncm91bmQxX0ZpbGxfdjIiIGZpbGw9IiNGRkZGRkYiLz48cGF0aCBkPSJNMTcxLjMzIDEwNi42MSAxNTMuNDIgMTA2LjYxIDE1My40MiA2OS42MkMxNTMuNDIgNjQuMTggMTUxLjEzIDYxLjE3IDE0NC45OCA2MS4xNyAxNDAuMzUgNjEuMTcgMTM3LjM1IDYzLjQgMTM0IDY2LjA3TDEzNCAxMDYuNiAxMTYuMSAxMDYuNiAxMTYuMSA0OS4wMSAxMzMuNSA0OS4wMSAxMzMuNSA1NC4wOEMxMzkuMzMgNTAuMTYgMTQ2LjAyIDQ3LjY2IDE1My4yNiA0Ny42NiAxNjQuNjggNDcuNjYgMTcxLjM0IDU0Ljc2IDE3MS4zNCA2NS41NkwxNzEuMzQgMTA2LjYiIGNsYXNzPSJNc2Z0T2ZjVGhtX0JhY2tncm91bmQxX0ZpbGxfdjIiIGZpbGw9IiNGRkZGRkYiLz48cGF0aCBkPSJNMTEyLjQgNDkuMDEgODMuNjkgMTE4Ljc3Qzc5LjI4IDEyOS40OSA3MC40MiAxMzcuMzUgNTguMzUgMTM3LjM1IDUyLjMxIDEzNy4zNSA0OS4xMiAxMzYuNTYgNDUuMTggMTM1LjY2TDQ3LjcxIDEyNC4xOEM1MC44OSAxMjQuOSA1My4yOCAxMjUuMTkgNTUuNDggMTI1LjE5IDYyLjY5IDEyNS4xOSA2Ni41MSAxMTkuMDcgNzAuMDEgMTEwLjY2TDcxLjcgMTA2LjYxIDQ5LjQgNDkuMDEgNjguNjUgNDkuMDEgNzkuMTIgNzcuNTZDODAuMzggODEuMDEgODEuMDkgODQuNTMgODEuNjUgODcuMDIgODIuMzEgODQuNTEgODMuNTggODAuMzcgODQuODYgNzcuMDVMOTUuNjcgNDkuMDEgMTEyLjM5IDQ5LjAxIiBjbGFzcz0iTXNmdE9mY1RobV9CYWNrZ3JvdW5kMV9GaWxsX3YyIiBmaWxsPSIjRkZGRkZGIi8+PHBhdGggZD0iTTQ5LjE1IDg4LjJDNDkuMTUgMTAwLjc0IDM3LjU3IDEwNy42MiAyMy44MSAxMDcuNjIgMTQuODYgMTA3LjYyIDcuNjMgMTA2LjEyLTAuMDEgMTAzLjA2TDQuODkgOTEuNDFDOS40MiA5My4yNSAxNS45NSA5NS4yOSAyMS4yNyA5NS4yOSAyNS40MiA5NS4yOSAzMS4yNCA5NC43OCAzMS4yNCA4OS43MSAzMS4yNCA4Ny4zNSAyOS43NSA4Ni4xMyAyNy4wMSA4NS4zMiAyMy41OCA4NC4zMSAxOC4zMiA4My40IDE0Ljg1IDgyLjQ1IDcuNTUgODAuNDQgMS41MSA3Ni42MSAxLjUxIDY1Ljg5IDEuNTEgNTQuMDIgMTEuNjQgNDYuNjQgMjUuNDkgNDYuNjQgMzQuNjQgNDYuNjQgNDAuNDUgNDcuODUgNDUuNTkgNDkuMzRMNDEuMDMgNjFDMzguNzYgNTkuOTcgMzIuMzkgNTguNDcgMjcuODUgNTguNDcgMjIuOTMgNTguNDcgMTkuNTcgNjAuMzUgMTkuNTcgNjMuMzcgMTkuNTcgNjQuODYgMjAuNSA2Ni43NSAyMy4xMiA2Ny41OSAyNS45MyA2OC41IDMwLjM3IDY5LjMgMzQuMSA3MC4xMiA0MS43MyA3MS44IDQ5LjEzIDc2LjE4IDQ5LjEzIDg4LjIiIGNsYXNzPSJNc2Z0T2ZjVGhtX0JhY2tncm91bmQxX0ZpbGxfdjIiIGZpbGw9IiNGRkZGRkYiLz48cGF0aCBkPSJNNDYyLjYxIDEwNi42MSA0NDUuNzIgMTA2LjYxIDQ0NS43MiAxMDIuMDVDNDQxLjMzIDEwNS45MyA0MzUuNjUgMTA3Ljc5IDQyOS4zMyAxMDcuNzkgNDE4LjYyIDEwNy43OSA0MTEuMjYgMTAyLjYgNDExLjI2IDkxLjc1IDQxMS4yNiA3Mi42NiA0MzAuMzIgNjkuNjkgNDQ1LjIxIDY5LjYyTDQ0NS4yMSA2OC4xQzQ0NS4yMSA2My4zNSA0NDMuNDIgNTkuOTkgNDM0LjkyIDU5Ljk5IDQyOS4xNyA1OS45OSA0MjIuNjQgNjIuODMgNDE4LjM2IDY1LjRMNDEzLjk3IDU0Ljc2QzQyMS41NyA1MC42MyA0MzEuMDIgNDcuNjcgNDM5Ljk4IDQ3LjY3IDQ1My43MyA0Ny42NyA0NjIuNjIgNTQuMjQgNDYyLjYyIDY1Ljc0TDQ2Mi42MiAxMDYuNjJaTTQ0NS4yMSA5MS4yNCA0NDUuMjEgODAuNkM0MzYuOTIgODAuNDcgNDI5LjE3IDgxLjI5IDQyOS4xNyA4OS4yMSA0MjkuMTcgOTQuMSA0MzMuMyA5NS42MyA0MzYuNDMgOTUuNjMgNDQwLjE0IDk1LjYzIDQ0My4wMSA5My43NyA0NDUuMjEgOTEuMjQiIGNsYXNzPSJNc2Z0T2ZjVGhtX0JhY2tncm91bmQxX0ZpbGxfdjIiIGZpbGw9IiNGRkZGRkYiLz48cGF0aCBkPSJNMjk2LjQxIDc1LjdDMjk2LjQxIDc3LjYxIDI5Ni4zNSA3OS41NyAyOTYuMjQgODEuNjFMMjU4LjA3IDgxLjYxQzI1OC4yMyA4OS45OSAyNjIuNDEgOTQuOTUgMjc0LjYyIDk0Ljk1IDI4MC4wMyA5NC45NSAyODYuNTMgOTIuNDkgMjg5LjMyIDkwLjU2TDI5NC4wNSAxMDEuMkMyODYuMTYgMTA1LjQ4IDI3Ny42NyAxMDcuNzkgMjY4LjIxIDEwNy43OSAyNTAuMzIgMTA3Ljc5IDIzOS4xNyA5Ni4yNyAyMzkuMTcgNzcuODkgMjM5LjE3IDU5LjUxIDI1My43OCA0Ny42NiAyNjkuNTYgNDcuNjYgMjg5LjIyIDQ3LjY2IDI5Ni40MiA1OS4xNSAyOTYuNDIgNzUuN1pNMjc3Ljk5IDcwLjEyQzI3OC4zIDYzLjc4IDI3NS4xMSA1OS44MiAyNjguODggNTkuODIgMjYyLjY1IDU5LjgyIDI1OS4yNSA2NC4yNSAyNTguMjMgNzAuMTJMMjc3Ljk5IDcwLjEyIiBjbGFzcz0iTXNmdE9mY1RobV9CYWNrZ3JvdW5kMV9GaWxsX3YyIiBmaWxsPSIjRkZGRkZGIi8+PHBhdGggZD0iTTIzOS4xOSAxMTMuN0MyMzkuMTkgMTMwLjUgMjIyLjQ0IDEzOC4yOCAyMDUuOTIgMTM4LjM2IDE5MS4zOCAxMzguNDMgMTc3LjM4IDEzNC4yNSAxNzcuMzggMTIwLjI5IDE3Ny4zOCAxMTMuNzYgMTgzLjE2IDEwOS4zOSAxODYuNjcgMTA3LjExIDE4NC43MyAxMDYgMTgyLjk1IDEwNS4xMiAxODEuNDMgMTAzLjM5IDE3OS44MyAxMDEuNTcgMTc4LjU2IDk4LjkxIDE3OC41NiA5NC40NCAxNzguNTYgODguODEgMTgzLjUzIDgzLjYgMTg5LjU0IDgwLjI1IDE4Ni4yIDc4LjQ5IDE4MS43NyA3NS42NyAxODEuNzcgNjYuMjMgMTgxLjc3IDUzLjk1IDE5My40MSA0Ny40OCAyMDguNjIgNDcuNDggMjIxLjU1IDQ3LjQ4IDIzMy45NiA1MC41NyAyMzMuOTYgNjUuNzIgMjMzLjk2IDgwLjg3IDIyMC4zNiA4NS40OCAyMDYuNTkgODUuNDggMjA0LjAzIDg1LjQ4IDIwMS43MyA4NS4wOCAxOTkuNDkgODQuNjQgMTk4LjAzIDg1LjQyIDE5NS4xIDg3LjM2IDE5NS4xIDg5LjU0IDE5NS4xIDkzLjk2IDIwMS4xNCA5NC42MSAyMDMuODggOTQuNjFMMjE4LjA3IDk0LjYxQzIzMS4yMyA5NC42MSAyMzkuMTkgMTAwLjk5IDIzOS4xOSAxMTMuNjlaTTIxNi41NiA2Ni41OEMyMTYuNTYgNjEuNzUgMjEzLjkgNTcuOCAyMDcuOTUgNTcuOCAyMDIuNTEgNTcuOCAxOTkuMTcgNjIuMzkgMTk5LjE3IDY2LjU4IDE5OS4xNyA3MS40MSAyMDIuMTggNzUuMzYgMjA3LjYxIDc1LjM2IDIxMy41OCA3NS4zNiAyMTYuNTYgNzEuMzkgMjE2LjU2IDY2LjU4Wk0yMjEuMjkgMTE2LjA3QzIyMS4yOSAxMTEuMzcgMjE3LjUzIDEwOS42NiAyMTMuNjkgMTA5LjY2TDE5Ny45OCAxMDkuNjZDMTk1LjU5IDExMS4wMiAxOTEuOSAxMTQuMDIgMTkxLjkgMTE3LjkzIDE5MS45IDEyMi45OSAxOTguNzEgMTI2LjM4IDIwNi43NiAxMjYuMzggMjE0LjgxIDEyNi4zOCAyMjEuMjkgMTIyLjU1IDIyMS4yOSAxMTYuMDciIGNsYXNzPSJNc2Z0T2ZjVGhtX0JhY2tncm91bmQxX0ZpbGxfdjIiIGZpbGw9IiNGRkZGRkYiLz48L3N2Zz4=" alt="Syngenta">
+      <div class="campaign-tag">Communication Campaign 2026</div>
+    </div>
+    <div class="header-hero">
+      <div class="product-label">Cadrasia NPD</div>
+      <div class="product-name">CADRASIA<br><span>Interview Guideline</span></div>
+      <div class="header-desc">แนวทางการเก็บ Testimonial ภาพนิ่ง &amp; VDO สำหรับทีม TMD x MDO</div>
+    </div>
+  </div>
+  <div class="header-accent">
+    <div class="accent-left">&#x1F3C6; รางวัลสำหรับทีมที่ดีที่สุด</div>
+    <div class="reward-chips">
+      <div class="reward-chip">&#x1F947; 5,000 บาท</div>
+      <div class="reward-chip">&#x1F948; 3,000 บาท</div>
+    </div>
+  </div>
+</div>
+<div class="divider-strip"></div>
+
+<!-- OBJECTIVE -->
+<div class="section">
+  <div class="sec-title">วัตถุประสงค์หลัก</div>
+  <div class="obj-row">
+    <div class="obj-card"><div class="obj-icon">&#x1F33E;</div><div class="obj-label">ยืนยัน RTB<br>ประสิทธิภาพ Cadrasia</div></div>
+    <div class="obj-card"><div class="obj-icon">&#x1F3AC;</div><div class="obj-label">เก็บ Testimonial<br>10-14 &amp; 45-60 DAA</div></div>
+    <div class="obj-card"><div class="obj-icon">&#x1F4CA;</div><div class="obj-label">วางแผน<br>กลยุทธ์การตลาด</div></div>
+  </div>
+</div>
+
+<!-- PLOT TYPE TABLE -->
+<div class="section">
+  <div class="sec-title">ประเภทแปลงและสิ่งที่ต้องเก็บ</div>
+  <div class="plot-section-title">A) ทุกแปลง (All plots) — วัตถุประสงค์: เก็บข้อมูลตามความจริง</div>
+  <table class="plot-table">
+    <tr>
+      <th>ช่วงเวลา</th>
+      <th>รูปนิ่ง</th>
+      <th>วีดีโอ / Testimonial</th>
+      <th>หมายเหตุ</th>
+    </tr>
+    <tr>
+      <td><strong>Safety</strong><br>7-14 วัน</td>
+      <td>ตามชุดรูปนิ่งที่พี่พ่อแชร์</td>
+      <td>Optional: ถ่ายพิษชัดมาก<br>ถ่ายวีดีโอ โดยถามชุดคำถาม<br>หัวข้อ "Safety"</td>
+      <td class="note-red">รอบนี้ต้องทำงานกับ TMD เพื่อคัดสรรแปลง</td>
+    </tr>
+    <tr>
+      <td><strong>Efficacy</strong><br>45-60 วัน</td>
+      <td>ตามชุดรูปนิ่งที่พี่พ่อแชร์</td>
+      <td>ถ่ายวีดีโอ โดยถามชุดคำถาม<br>สำหรับ <u>ทุกแปลง</u></td>
+      <td></td>
+    </tr>
+  </table>
+
+  <div class="plot-section-title" style="margin-top:10px;">B) แปลงที่คัดเลือก (Selected plots: Cadrasia looks best) — วัตถุประสงค์: จุดชนะ/ผลลัพธ์ดีสุด</div>
+  <table class="plot-table">
+    <tr>
+      <th>ช่วงเวลา</th>
+      <th>รูปนิ่ง</th>
+      <th>วีดีโอ / Testimonial</th>
+      <th>หมายเหตุ</th>
+    </tr>
+    <tr>
+      <td><strong>Safety</strong><br>7-14 วัน</td>
+      <td>ตามชุดรูปนิ่งที่พี่พ่อแชร์</td>
+      <td>Optional: ถ่ายพิษชัดมาก<br>ถ่าย VDO &amp; ถามชุดคำถาม "Safety"</td>
+      <td class="note-red">รอบนี้ต้องทำงานกับ TMD &amp; เป็น "แปลงหลัก" สำหรับใช้ต่อยอด Pre-launch</td>
+    </tr>
+    <tr>
+      <td><strong>Efficacy</strong><br>45-60 วัน</td>
+      <td>ตามชุดรูปนิ่งที่พี่พ่อแชร์</td>
+      <td>ถ่ายวีดีโอครบ โดยถามชุดคำถาม<br>สำหรับ <u>ทุกแปลง</u> &amp; "เฉพาะแปลงที่คัดเลือก"</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td colspan="4" style="padding:5px 10px; font-size:10px; color:#666;">&#x1F4CC; ป้ายปักแปลง</td>
+    </tr>
+  </table>
+</div>
+
+<!-- PHOTO GUIDE -->
+<div class="section">
+  <div class="sec-title">แนวทางการถ่ายภาพ (15-20 ภาพ / แปลง / 30 วัน)</div>
+  <div class="photo-row">
+    <div class="photo-card"><div class="photo-num">01</div><div class="photo-icon">&#x1F33F;</div><div class="photo-label">Weed Stage<br>ก่อนพ่น</div></div>
+    <div class="photo-card"><div class="photo-num">02</div><div class="photo-icon">&#x1F50D;</div><div class="photo-label">Phyto-toxic<br>Close up</div></div>
+    <div class="photo-card"><div class="photo-num">03</div><div class="photo-icon">&#x2194;&#xFE0F;</div><div class="photo-label">Side by Side<br>vs Farmer</div></div>
+    <div class="photo-card"><div class="photo-num">04</div><div class="photo-icon">&#x1F5BC;&#xFE0F;</div><div class="photo-label">Wide Shot<br>มุมกว้าง</div></div>
+    <div class="photo-card"><div class="photo-num">05</div><div class="photo-icon">&#x1F52C;</div><div class="photo-label">Close up<br>มุมซูมใกล้</div></div>
+    <div class="photo-card"><div class="photo-num">06</div><div class="photo-icon">&#x1F4F9;</div><div class="photo-label">VDO Feedback<br>เกษตรกร</div></div>
+  </div>
+  <div class="alert-box">&#x26A0;&#xFE0F; <strong>สำคัญ:</strong> ถ่าย <u>มุมเดิม ตำแหน่งเดิม ระยะเดิม</u> ทุกครั้ง &nbsp;|&nbsp; แนวนอนเท่านั้น &nbsp;|&nbsp; ปักหมุดจุดยืนครั้งแรก</div>
+</div>
+
+<!-- TIMELINE -->
+<div class="section">
+  <div class="sec-title">Timeline การเก็บภาพ 30 วัน</div>
+  <div class="tl-wrap">
+    <div class="tl-item"><div class="tl-node hi">ก่อน</div><div class="tl-label">ก่อนพ่น</div></div>
+    <div class="tl-item"><div class="tl-node">6</div><div class="tl-label">6 วัน</div></div>
+    <div class="tl-item"><div class="tl-node">8</div><div class="tl-label">8 วัน</div></div>
+    <div class="tl-item"><div class="tl-node">15</div><div class="tl-label">15 วัน</div></div>
+    <div class="tl-item"><div class="tl-node">20</div><div class="tl-label">20 วัน</div></div>
+    <div class="tl-item"><div class="tl-node hi">30</div><div class="tl-label">30 วัน</div></div>
+  </div>
+</div>
+
+<!-- INTERVIEW QUESTIONS -->
+<div class="section">
+  <div class="sec-title">ชุดคำถาม Interview แยก 4 Key Messages</div>
+
+  <div class="q-block">
+    <div class="q-topic">&#x1F33E; ผลลัพธ์ + ประสิทธิภาพสูง</div>
+    <div class="q-item"><strong>Q1:</strong> "แนะนำตัวหน่อยครับ (ชื่อ...นามสกุล...จังหวัด...)"<br><span class="q-intent">เพื่อให้เกษตรกรแนะนำตัวก่อน ตัดออกในตัดต่อ แทนด้วย text</span></div>
+    <div class="q-item"><strong>Q2:</strong> "หลังจากพ่นตัวนี้ (คาดราเซีย) ผลยังไงบ้างครับ?" &nbsp;/&nbsp; "แล้วปกติที่แปลง...มีปัญหาหญ้าอะไรบ้าง?"<br><span class="q-intent">ให้เกษตรกรเอ่ยชื่อหญ้าออกมา แล้วถามว่า Cadrasia ได้ผลกับหญ้าชนิดนั้นอย่างไร เช่น ตายเรียบเลย? เอาอยู่ใช่มั้ย?</span></div>
+  </div>
+
+  <div class="q-block">
+    <div class="q-topic blue">&#x1F6E1;&#xFE0F; ไม่ส่งผลกระทบกับข้าว (Safety)</div>
+    <div class="q-item"><strong>Q1:</strong> "คาดราเซียได้ผลดีกับหญ้าแบบนี้ แล้วต้นข้าว เป็นอะไรมั้ยครับ?"<br><span class="q-intent">ให้ผู้ถูกถามตอบว่าต้นข้าวไม่ได้รับผลกระทบเลย</span></div>
+    <div class="q-item"><strong>Q2:</strong> "ปกติเวลาใช้ยาบางตัว ข้าวจะแดง จะงัน ข้าวอาน บ้าง แล้วคาดราเซียละ มีผลอะไรกับข้าวมั้ย?"<br><span class="q-intent">ให้ผู้ถูกถามบอกว่าข้าวที่ใช้ Cadrasia ไม่เกิดอาการเหล่านั้น</span></div>
+    <div class="q-item"><strong>Q3:</strong> "หญ้าก็จัดการอยู่หมัด แถมต้นข้าวก็ปลอดภัย แบบนี้คิดว่าผลผลิตปีนี้จะโอเคขึ้นมั้ย?"</div>
+  </div>
+
+  <div class="q-block">
+    <div class="q-topic teal">&#x1F4E6; ขวดเดียวเอาอยู่</div>
+    <div class="q-item"><strong>Q1:</strong> "ปกติช่วงนี้คุม-ฆ่าหญ้ายังไง?" &nbsp;→&nbsp; "แล้วนี่ได้ลองใช้ คาดราเซีย ต้องผสมอะไรเพิ่มมั้ย?"<br><span class="q-intent">ให้บอกถึงความสะดวกและประหยัดเวลา ไม่ต้องผสมหลายตัว</span></div>
+    <div class="q-item"><strong>Q2:</strong> "แบบนี้ตอบโจทย์การคุมฆ่าหญ้าขึ้นมั้ย? ไม่ต้องผสมอะไรยุ่งยาก ไม่ต้องตามแก้เวลาข้าวอาน ข้าวแดง ข้าวงัน"</div>
+  </div>
+
+  <div class="q-block" style="margin-bottom:0;">
+    <div class="q-topic orange">&#x1F91D; มั่นใจ + บอกต่อ</div>
+    <div class="q-item"><strong>Q1:</strong> "หลังจากเปลี่ยนมาใช้คาดราเซีย รู้สึกว่าคุม-ฆ่าหญ้าได้ดีกว่าที่เคยใช้มั้ย?"</div>
+    <div class="q-item"><strong>Q2:</strong> "เห็นผลของแปลงนี้แล้ว ทำนารอบหน้า...จะใช้คาดราเซียอีกมั้ย?"<br><span class="q-intent">แพนกล้องให้เห็นแปลงข้าวสวยงามไม่มีวัชพืชไปพร้อมกัน</span></div>
+    <div class="q-item"><strong>Q3:</strong> "สุดท้ายถ้าจะป้ายยา (บอกต่อ) เพื่อนๆ คนอื่น จะบอกว่ายังไง?"</div>
+  </div>
+</div>
+
+<!-- FILMING TIPS -->
+<div class="section">
+  <div class="sec-title">เทคนิคการถ่ายทำ VDO</div>
+  <div class="film-grid">
+    <div class="film-item"><div class="film-ico">&#x2705;</div><div>ใช้บุคคลที่ 3 ถ่าย ให้เกษตรกรพูดคุยกับผู้สัมภาษณ์ตามธรรมชาติ</div></div>
+    <div class="film-item"><div class="film-ico">&#x2705;</div><div>เลือก <strong>นั่งพูดคุย</strong> หรือ <strong>เดินพูดคุย</strong> ตามธรรมชาติของผู้ถูกถาม</div></div>
+    <div class="film-item warn"><div class="film-ico">&#x274C;</div><div>หลีกเลี่ยงให้พูดตรงหน้ากล้อง เพราะทำให้เกร็ง</div></div>
+    <div class="film-item"><div class="film-ico">&#x1F3D9;&#xFE0F;</div><div>เช็คเสียง SONY ICD-PX470 ก่อน/ระหว่าง/หลังถ่ายทุกครั้ง</div></div>
+    <div class="film-item warn"><div class="film-ico">&#x1F4A1;</div><div>ระวัง <strong>ย้อนแสง</strong> อย่าให้แดดอยู่หลังผู้ถูกสัมภาษณ์</div></div>
+    <div class="film-item warn"><div class="film-ico">&#x1F52D;</div><div>เช็คโฟกัสตลอด ขยับกล้องเข้าใกล้แทนซูม ห้ามซูมเกิน x2</div></div>
+  </div>
+</div>
+
+<!-- COLLECTION -->
+<div class="section" style="border-bottom:none;">
+  <div class="sec-title">การส่งไฟล์ VDO Collection</div>
+  <div class="collect-row">
+    <div class="collect-card">
+      <div class="collect-title">&#x1F4C1; ตั้งชื่อ Folder</div>
+      <span class="code-tag">MDO Name_จังหวัด_วันที่ปลูก</span>
+    </div>
+    <div class="collect-card">
+      <div class="collect-title">&#x1F4C4; ตั้งชื่อไฟล์</div>
+      <span class="code-tag">จังหวัด_วันที่_Safety</span><br>
+      <span class="code-tag">จังหวัด_วันที่_Efficacy</span>
+    </div>
+  </div>
+  <div class="collect-note">&#x1F4CC; ไม่สามารถเข้าถึง Link ได้ ติดต่อจูน พร้อมแจ้ง Email เพื่อขอสิทธิ์เข้าถึงไฟล์</div>
+</div>
+
+<!-- FOOTER -->
+<div class="footer">
+  <div class="footer-left">
+    <strong>Syngenta Thailand</strong><br>
+    Communication Campaign 2026 &nbsp;|&nbsp; TMD x MDO Massive Trial<br>
+    Classification: INTERNAL USE ONLY
+  </div>
+  <div class="footer-logo"><img src="data:image/svg+xml;base64,PHN2ZyB2aWV3Qm94PSIwIDAgNDYyLjYxIDEzOC4zNiIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIiB4bWxuczp4bGluaz0iaHR0cDovL3d3dy53My5vcmcvMTk5OS94bGluayIgaWQ9ImEiIG92ZXJmbG93PSJoaWRkZW4iPjxzdHlsZT4NCi5Nc2Z0T2ZjVGhtX0JhY2tncm91bmQxX0ZpbGxfdjIgew0KIGZpbGw6I0ZGRkZGRjsgDQp9DQo8L3N0eWxlPg0KPGRlZnM+PC9kZWZzPjxwYXRoIGQ9Ik00MDcuNjYgNjAuNSAzOTEuOTUgNjAuNSAzOTEuOTUgODYuNTFDMzkxLjk1IDkzLjkyIDM5NS44NSA5NS4yOSA0MDAuOSA5NS4yOSA0MDIuNjYgOTUuMjkgNDA0LjU2IDk1LjA0IDQwNi40NyA5NC43OEw0MDcuNjYgMTA2LjQ0QzQwMy41NSAxMDcuMTcgMzk4LjA1IDEwNy43OSAzOTQuNDggMTA3Ljc5IDM4My42NiAxMDcuNzkgMzc0LjA1IDEwNC4wMSAzNzQuMDUgOTAuNzNMMzc0LjA1IDYwLjUgMzY0LjkzIDYwLjUgMzY0LjkzIDQ5LjAxIDM3NC4wNSA0OS4wMSAzNzQuMDUgMzYuMzUgMzkxLjk1IDMxLjI4IDM5MS45NSA0OS4wMSA0MDcuNjYgNDkuMDEgNDA3LjY2IDYwLjUiIGNsYXNzPSJNc2Z0T2ZjVGhtX0JhY2tncm91bmQxX0ZpbGxfdjIiIGZpbGw9IiNGRkZGRkYiLz48cGF0aCBkPSJNMzU5LjQ4IDEwNi42MSAzNDEuNTcgMTA2LjYxIDM0MS41NyA2OS42MkMzNDEuNTcgNjQuMTggMzM5LjI4IDYxLjE3IDMzMy4xMyA2MS4xNyAzMjguNSA2MS4xNyAzMjUuNSA2My40IDMyMi4xNiA2Ni4wN0wzMjIuMTYgMTA2LjYgMzA0LjI1IDEwNi42IDMwNC4yNSA0OS4wMSAzMjEuNjUgNDkuMDEgMzIxLjY1IDU0LjA4QzMyNy40OSA1MC4xNiAzMzQuMTcgNDcuNjYgMzQxLjQxIDQ3LjY2IDM1Mi44MyA0Ny42NiAzNTkuNDggNTQuNzYgMzU5LjQ4IDY1LjU2TDM1OS40OCAxMDYuNiIgY2xhc3M9Ik1zZnRPZmNUaG1fQmFja2dyb3VuZDFfRmlsbF92MiIgZmlsbD0iI0ZGRkZGRiIvPjxwYXRoIGQ9Ik0yNjguMTMgMEMyNTkuMDcgMTUuMzUgMjYzLjAxIDI5LjI1IDI1NC4xNSAzOC4xIDI0Ny4wMyA0NS4yMiAyNDAuNDQgNDQuOTkgMjMyLjY4IDQ0Ljk5IDIyOS45OCA0NC45OSAyMjQuNzQgNDUuMjIgMjIyLjU0IDQ2LjgxIDIyMS4yNyA0Mi43NSAyMjAuNzIgMzguMjkgMjIwLjcyIDM0LjA0IDIyMC43MiAyNi43MyAyMjIuMzYgMjAuMjMgMjI3LjYyIDE0Ljk4IDIzNy42OCA0LjkyIDI1NS45IDEuNzMgMjY4LjE0LTAuMDIiIGNsYXNzPSJNc2Z0T2ZjVGhtX0JhY2tncm91bmQxX0ZpbGxfdjIiIGZpbGw9IiNGRkZGRkYiLz48cGF0aCBkPSJNMTcxLjMzIDEwNi42MSAxNTMuNDIgMTA2LjYxIDE1My40MiA2OS42MkMxNTMuNDIgNjQuMTggMTUxLjEzIDYxLjE3IDE0NC45OCA2MS4xNyAxNDAuMzUgNjEuMTcgMTM3LjM1IDYzLjQgMTM0IDY2LjA3TDEzNCAxMDYuNiAxMTYuMSAxMDYuNiAxMTYuMSA0OS4wMSAxMzMuNSA0OS4wMSAxMzMuNSA1NC4wOEMxMzkuMzMgNTAuMTYgMTQ2LjAyIDQ3LjY2IDE1My4yNiA0Ny42NiAxNjQuNjggNDcuNjYgMTcxLjM0IDU0Ljc2IDE3MS4zNCA2NS41NkwxNzEuMzQgMTA2LjYiIGNsYXNzPSJNc2Z0T2ZjVGhtX0JhY2tncm91bmQxX0ZpbGxfdjIiIGZpbGw9IiNGRkZGRkYiLz48cGF0aCBkPSJNMTEyLjQgNDkuMDEgODMuNjkgMTE4Ljc3Qzc5LjI4IDEyOS40OSA3MC40MiAxMzcuMzUgNTguMzUgMTM3LjM1IDUyLjMxIDEzNy4zNSA0OS4xMiAxMzYuNTYgNDUuMTggMTM1LjY2TDQ3LjcxIDEyNC4xOEM1MC44OSAxMjQuOSA1My4yOCAxMjUuMTkgNTUuNDggMTI1LjE5IDYyLjY5IDEyNS4xOSA2Ni41MSAxMTkuMDcgNzAuMDEgMTEwLjY2TDcxLjcgMTA2LjYxIDQ5LjQgNDkuMDEgNjguNjUgNDkuMDEgNzkuMTIgNzcuNTZDODAuMzggODEuMDEgODEuMDkgODQuNTMgODEuNjUgODcuMDIgODIuMzEgODQuNTEgODMuNTggODAuMzcgODQuODYgNzcuMDVMOTUuNjcgNDkuMDEgMTEyLjM5IDQ5LjAxIiBjbGFzcz0iTXNmdE9mY1RobV9CYWNrZ3JvdW5kMV9GaWxsX3YyIiBmaWxsPSIjRkZGRkZGIi8+PHBhdGggZD0iTTQ5LjE1IDg4LjJDNDkuMTUgMTAwLjc0IDM3LjU3IDEwNy42MiAyMy44MSAxMDcuNjIgMTQuODYgMTA3LjYyIDcuNjMgMTA2LjEyLTAuMDEgMTAzLjA2TDQuODkgOTEuNDFDOS40MiA5My4yNSAxNS45NSA5NS4yOSAyMS4yNyA5NS4yOSAyNS40MiA5NS4yOSAzMS4yNCA5NC43OCAzMS4yNCA4OS43MSAzMS4yNCA4Ny4zNSAyOS43NSA4Ni4xMyAyNy4wMSA4NS4zMiAyMy41OCA4NC4zMSAxOC4zMiA4My40IDE0Ljg1IDgyLjQ1IDcuNTUgODAuNDQgMS41MSA3Ni42MSAxLjUxIDY1Ljg5IDEuNTEgNTQuMDIgMTEuNjQgNDYuNjQgMjUuNDkgNDYuNjQgMzQuNjQgNDYuNjQgNDAuNDUgNDcuODUgNDUuNTkgNDkuMzRMNDEuMDMgNjFDMzguNzYgNTkuOTcgMzIuMzkgNTguNDcgMjcuODUgNTguNDcgMjIuOTMgNTguNDcgMTkuNTcgNjAuMzUgMTkuNTcgNjMuMzcgMTkuNTcgNjQuODYgMjAuNSA2Ni43NSAyMy4xMiA2Ny41OSAyNS45MyA2OC41IDMwLjM3IDY5LjMgMzQuMSA3MC4xMiA0MS43MyA3MS44IDQ5LjEzIDc2LjE4IDQ5LjEzIDg4LjIiIGNsYXNzPSJNc2Z0T2ZjVGhtX0JhY2tncm91bmQxX0ZpbGxfdjIiIGZpbGw9IiNGRkZGRkYiLz48cGF0aCBkPSJNNDYyLjYxIDEwNi42MSA0NDUuNzIgMTA2LjYxIDQ0NS43MiAxMDIuMDVDNDQxLjMzIDEwNS45MyA0MzUuNjUgMTA3Ljc5IDQyOS4zMyAxMDcuNzkgNDE4LjYyIDEwNy43OSA0MTEuMjYgMTAyLjYgNDExLjI2IDkxLjc1IDQxMS4yNiA3Mi42NiA0MzAuMzIgNjkuNjkgNDQ1LjIxIDY5LjYyTDQ0NS4yMSA2OC4xQzQ0NS4yMSA2My4zNSA0NDMuNDIgNTkuOTkgNDM0LjkyIDU5Ljk5IDQyOS4xNyA1OS45OSA0MjIuNjQgNjIuODMgNDE4LjM2IDY1LjRMNDEzLjk3IDU0Ljc2QzQyMS41NyA1MC42MyA0MzEuMDIgNDcuNjcgNDM5Ljk4IDQ3LjY3IDQ1My43MyA0Ny42NyA0NjIuNjIgNTQuMjQgNDYyLjYyIDY1Ljc0TDQ2Mi42MiAxMDYuNjJaTTQ0NS4yMSA5MS4yNCA0NDUuMjEgODAuNkM0MzYuOTIgODAuNDcgNDI5LjE3IDgxLjI5IDQyOS4xNyA4OS4yMSA0MjkuMTcgOTQuMSA0MzMuMyA5NS42MyA0MzYuNDMgOTUuNjMgNDQwLjE0IDk1LjYzIDQ0My4wMSA5My43NyA0NDUuMjEgOTEuMjQiIGNsYXNzPSJNc2Z0T2ZjVGhtX0JhY2tncm91bmQxX0ZpbGxfdjIiIGZpbGw9IiNGRkZGRkYiLz48cGF0aCBkPSJNMjk2LjQxIDc1LjdDMjk2LjQxIDc3LjYxIDI5Ni4zNSA3OS41NyAyOTYuMjQgODEuNjFMMjU4LjA3IDgxLjYxQzI1OC4yMyA4OS45OSAyNjIuNDEgOTQuOTUgMjc0LjYyIDk0Ljk1IDI4MC4wMyA5NC45NSAyODYuNTMgOTIuNDkgMjg5LjMyIDkwLjU2TDI5NC4wNSAxMDEuMkMyODYuMTYgMTA1LjQ4IDI3Ny42NyAxMDcuNzkgMjY4LjIxIDEwNy43OSAyNTAuMzIgMTA3Ljc5IDIzOS4xNyA5Ni4yNyAyMzkuMTcgNzcuODkgMjM5LjE3IDU5LjUxIDI1My43OCA0Ny42NiAyNjkuNTYgNDcuNjYgMjg5LjIyIDQ3LjY2IDI5Ni40MiA1OS4xNSAyOTYuNDIgNzUuN1pNMjc3Ljk5IDcwLjEyQzI3OC4zIDYzLjc4IDI3NS4xMSA1OS44MiAyNjguODggNTkuODIgMjYyLjY1IDU5LjgyIDI1OS4yNSA2NC4yNSAyNTguMjMgNzAuMTJMMjc3Ljk5IDcwLjEyIiBjbGFzcz0iTXNmdE9mY1RobV9CYWNrZ3JvdW5kMV9GaWxsX3YyIiBmaWxsPSIjRkZGRkZGIi8+PHBhdGggZD0iTTIzOS4xOSAxMTMuN0MyMzkuMTkgMTMwLjUgMjIyLjQ0IDEzOC4yOCAyMDUuOTIgMTM4LjM2IDE5MS4zOCAxMzguNDMgMTc3LjM4IDEzNC4yNSAxNzcuMzggMTIwLjI5IDE3Ny4zOCAxMTMuNzYgMTgzLjE2IDEwOS4zOSAxODYuNjcgMTA3LjExIDE4NC43MyAxMDYgMTgyLjk1IDEwNS4xMiAxODEuNDMgMTAzLjM5IDE3OS44MyAxMDEuNTcgMTc4LjU2IDk4LjkxIDE3OC41NiA5NC40NCAxNzguNTYgODguODEgMTgzLjUzIDgzLjYgMTg5LjU0IDgwLjI1IDE4Ni4yIDc4LjQ5IDE4MS43NyA3NS42NyAxODEuNzcgNjYuMjMgMTgxLjc3IDUzLjk1IDE5My40MSA0Ny40OCAyMDguNjIgNDcuNDggMjIxLjU1IDQ3LjQ4IDIzMy45NiA1MC41NyAyMzMuOTYgNjUuNzIgMjMzLjk2IDgwLjg3IDIyMC4zNiA4NS40OCAyMDYuNTkgODUuNDggMjA0LjAzIDg1LjQ4IDIwMS43MyA4NS4wOCAxOTkuNDkgODQuNjQgMTk4LjAzIDg1LjQyIDE5NS4xIDg3LjM2IDE5NS4xIDg5LjU0IDE5NS4xIDkzLjk2IDIwMS4xNCA5NC42MSAyMDMuODggOTQuNjFMMjE4LjA3IDk0LjYxQzIzMS4yMyA5NC42MSAyMzkuMTkgMTAwLjk5IDIzOS4xOSAxMTMuNjlaTTIxNi41NiA2Ni41OEMyMTYuNTYgNjEuNzUgMjEzLjkgNTcuOCAyMDcuOTUgNTcuOCAyMDIuNTEgNTcuOCAxOTkuMTcgNjIuMzkgMTk5LjE3IDY2LjU4IDE5OS4xNyA3MS40MSAyMDIuMTggNzUuMzYgMjA3LjYxIDc1LjM2IDIxMy41OCA3NS4zNiAyMTYuNTYgNzEuMzkgMjE2LjU2IDY2LjU4Wk0yMjEuMjkgMTE2LjA3QzIyMS4yOSAxMTEuMzcgMjE3LjUzIDEwOS42NiAyMTMuNjkgMTA5LjY2TDE5Ny45OCAxMDkuNjZDMTk1LjU5IDExMS4wMiAxOTEuOSAxMTQuMDIgMTkxLjkgMTE3LjkzIDE5MS45IDEyMi45OSAxOTguNzEgMTI2LjM4IDIwNi43NiAxMjYuMzggMjE0LjgxIDEyNi4zOCAyMjEuMjkgMTIyLjU1IDIyMS4yOSAxMTYuMDciIGNsYXNzPSJNc2Z0T2ZjVGhtX0JhY2tncm91bmQxX0ZpbGxfdjIiIGZpbGw9IiNGRkZGRkYiLz48L3N2Zz4=" alt="Syngenta"></div>
+</div>
+
+</div>
+</body>
+</html>
