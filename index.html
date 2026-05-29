@@ -16,7 +16,7 @@ body {
   padding: 28px 16px;
 }
 .artwork {
-  width: 620px;
+  width: 640px;
   background: #fff;
   border-radius: 20px;
   overflow: hidden;
@@ -34,9 +34,7 @@ body {
   width:220px; height:220px; border-radius:50%;
   background:rgba(0,154,102,0.15);
 }
-.logo-bar {
-  display:flex; justify-content:space-between; align-items:center; margin-bottom:16px;
-}
+.logo-bar { display:flex; justify-content:space-between; align-items:center; margin-bottom:16px; }
 .logo-bar img { height:26px; }
 .campaign-tag {
   background:rgba(0,154,102,0.25); border:1px solid rgba(0,154,102,0.5);
@@ -47,7 +45,7 @@ body {
 .product-label { font-size:10px; font-weight:700; color:rgba(255,255,255,0.5); letter-spacing:2px; text-transform:uppercase; margin-bottom:3px; }
 .product-name { font-family:'Prompt',sans-serif; font-size:38px; font-weight:900; line-height:1; color:#fff; letter-spacing:-1px; }
 .product-name span { color:#7FCA3F; }
-.header-desc { font-size:12.5px; color:rgba(255,255,255,0.75); margin-top:6px; line-height:1.5; max-width:380px; }
+.header-desc { font-size:12.5px; color:rgba(255,255,255,0.75); margin-top:6px; line-height:1.5; }
 .header-accent {
   background:#009A66; padding:9px 28px;
   display:flex; justify-content:space-between; align-items:center;
@@ -70,32 +68,38 @@ body {
 }
 .sec-title::before { content:''; display:inline-block; width:10px; height:10px; background:#7FCA3F; border-radius:2px; flex-shrink:0; }
 
-/* OBJECTIVE */
-.obj-row { display:grid; grid-template-columns:1fr 1fr 1fr; gap:7px; margin-bottom:9px; }
-.obj-card {
-  background:linear-gradient(145deg,#f0f7e6,#e8f4fd); border-radius:10px;
-  padding:10px 8px; text-align:center; border-top:3px solid #7FCA3F;
+/* TAGS */
+/* A = blue, Safety = blue, Efficacy = blue (same color family) */
+.tag-a {
+  display:inline-block; background:#004896; color:#fff;
+  font-size:9px; font-weight:800; padding:2px 8px; border-radius:4px; margin-right:3px;
 }
-.obj-icon { font-size:20px; margin-bottom:4px; }
-.obj-label { font-size:11px; font-weight:700; color:#004896; line-height:1.35; }
-.reward-row { display:flex; gap:8px; flex-wrap:wrap; }
-.reward-badge {
-  display:inline-flex; align-items:center; gap:5px;
-  background:linear-gradient(135deg,#ff8f00,#f57c00);
-  color:#fff; font-size:11.5px; font-weight:700;
-  padding:5px 14px; border-radius:20px;
-  box-shadow:0 2px 8px rgba(255,143,0,0.3);
+/* B = purple — distinct from A */
+.tag-b {
+  display:inline-block; background:#6a1b9a; color:#fff;
+  font-size:9px; font-weight:800; padding:2px 8px; border-radius:4px; margin-right:3px;
+}
+.opt-tag {
+  display:inline-block; background:#f57c00; color:#fff;
+  font-size:9px; font-weight:700; padding:1px 6px; border-radius:3px;
 }
 
-/* PHOTO */
-.photo-row { display:grid; grid-template-columns:repeat(3,1fr); gap:7px; }
+/* STEP CIRCLES */
+.step-blue { background:#004896; color:#fff; font-size:10px; font-weight:800; min-width:22px; height:22px; border-radius:50%; display:flex; align-items:center; justify-content:center; flex-shrink:0; }
+.step-orange { background:#f57c00; color:#fff; font-size:10px; font-weight:800; min-width:22px; height:22px; border-radius:50%; display:flex; align-items:center; justify-content:center; flex-shrink:0; }
+.step-purple { background:#6a1b9a; color:#fff; font-size:10px; font-weight:800; min-width:22px; height:22px; border-radius:50%; display:flex; align-items:center; justify-content:center; flex-shrink:0; }
+.step-plus { background:#6a1b9a; color:#fff; font-size:10px; font-weight:800; padding:2px 7px; border-radius:4px; flex-shrink:0; font-size:9.5px; }
+
+/* PHOTO GRID */
+.photo-grid { display:grid; grid-template-columns:repeat(3,1fr); gap:8px; }
 .photo-card {
-  background:#f8fcf4; border:1.5px solid #d4edbc;
-  border-radius:10px; padding:9px 7px; text-align:center; position:relative;
+  background:#f8fcf4; border:1.5px solid #c8e6a8;
+  border-radius:10px; padding:10px 8px; text-align:center; position:relative;
 }
-.photo-num { position:absolute; top:5px; left:7px; font-size:8.5px; font-weight:800; color:#009A66; }
-.photo-icon { font-size:18px; margin:4px 0 3px; }
-.photo-label { font-size:10px; font-weight:700; color:#1b4d2e; line-height:1.35; }
+.photo-num { position:absolute; top:6px; left:8px; font-size:9px; font-weight:800; color:#009A66; }
+.photo-icon { font-size:26px; margin:6px 0 5px; }
+.photo-label { font-size:11px; font-weight:700; color:#1b4d2e; line-height:1.4; }
+.photo-sub { font-size:9.5px; color:#4a7c4e; margin-top:3px; line-height:1.3; }
 .alert-box {
   margin-top:8px; background:#fff8e1; border-left:4px solid #ffa000;
   border-radius:0 8px 8px 0; padding:7px 11px; font-size:10.5px; color:#6d4c00; line-height:1.5;
@@ -119,32 +123,43 @@ body {
 .tl-node.hi { background:#004896; border-color:#004896; color:#fff; }
 .tl-label { font-size:9.5px; color:#555; font-weight:600; line-height:1.3; }
 
-/* KEY MESSAGES */
-.key-grid { display:grid; grid-template-columns:1fr 1fr; gap:7px; }
-.key-card {
-  display:flex; align-items:flex-start; gap:8px;
-  background:#f7f9ff; border-radius:10px; padding:9px 10px; border-left:4px solid #004896;
+/* DO/DONT */
+.do-dont { display:grid; grid-template-columns:1fr 1fr; gap:10px; margin-top:4px; }
+.do-col { background:#f1f9eb; border-radius:10px; padding:10px 12px; border-top:3px solid #7FCA3F; }
+.dont-col { background:#fff3f3; border-radius:10px; padding:10px 12px; border-top:3px solid #ef5350; }
+.do-col .col-title { font-size:10px; font-weight:800; color:#2e7d32; margin-bottom:7px; }
+.dont-col .col-title { font-size:10px; font-weight:800; color:#c62828; margin-bottom:7px; }
+.do-item, .dont-item {
+  display:flex; align-items:flex-start; gap:6px;
+  font-size:10.5px; line-height:1.45; margin-bottom:5px; color:#333;
 }
-.key-pill {
-  background:#004896; color:#fff; font-size:9px; font-weight:800;
-  padding:3px 7px; border-radius:4px; white-space:nowrap; margin-top:1px;
-  min-width:48px; text-align:center; flex-shrink:0;
-}
-.key-pill.g { background:#009A66; }
-.key-pill.t { background:#00796b; }
-.key-pill.o { background:#e65100; }
-.key-text { font-size:11px; color:#333; line-height:1.45; }
-.key-text strong { color:#004896; font-weight:700; }
 
-/* FILMING */
-.film-grid { display:grid; grid-template-columns:1fr 1fr; gap:6px; }
-.film-item {
-  display:flex; align-items:flex-start; gap:7px;
-  background:#f0f7ff; border-radius:8px; padding:8px 10px;
-  font-size:11px; color:#334; line-height:1.4;
+/* QUESTION BLOCKS */
+.q-block { margin-bottom:9px; }
+.q-topic-bar {
+  padding:7px 12px; border-radius:8px 8px 0 0;
+  font-size:11px; font-weight:800; color:#fff;
+  display:flex; justify-content:space-between; align-items:center;
 }
-.film-item.warn { background:#fff3f3; }
-.film-ico { font-size:14px; flex-shrink:0; margin-top:1px; }
+.q-topic-bar.blue  { background:#004896; }
+.q-topic-bar.purple{ background:#6a1b9a; }
+.q-topic-bar .scope { font-size:9.5px; font-weight:600; opacity:0.85; }
+.q-body { background:#fafbff; border:1px solid #e0e6f7; border-top:none; border-radius:0 0 8px 8px; padding:8px 10px; }
+.q-item {
+  display:flex; align-items:flex-start; gap:8px;
+  border-left:3px solid #c5cee8; padding:7px 9px; border-radius:0 6px 6px 0;
+  background:#fff; margin-bottom:5px; font-size:11px; line-height:1.5;
+}
+.q-item:last-child { margin-bottom:0; }
+.q-num-blue { background:#004896; color:#fff; font-size:9px; font-weight:800; width:18px; height:18px; border-radius:50%; display:flex; align-items:center; justify-content:center; flex-shrink:0; margin-top:1px; }
+.q-num-purple { background:#6a1b9a; color:#fff; font-size:9px; font-weight:800; width:18px; height:18px; border-radius:50%; display:flex; align-items:center; justify-content:center; flex-shrink:0; margin-top:1px; }
+.q-hint { font-size:9.5px; color:#777; margin-top:3px; font-style:italic; line-height:1.4; }
+.q-extra { background:#e8f5e9; border-radius:5px; padding:5px 8px; font-size:10px; color:#1b5e20; margin-top:4px; line-height:1.4; }
+.intro-box {
+  background:#fff8e1; border:1px solid #ffe082; border-radius:8px;
+  padding:9px 12px; font-size:11px; color:#555; line-height:1.6; margin-bottom:10px;
+}
+.intro-box strong { color:#e65100; }
 
 /* PLOT TABLE */
 .plot-table { width:100%; border-collapse:collapse; font-size:10.5px; }
@@ -153,33 +168,8 @@ body {
   padding:7px 10px; text-align:left; font-size:10px;
 }
 .plot-table th:first-child { background:#003370; }
-.plot-table td { padding:7px 10px; vertical-align:top; border-bottom:1px solid #eef0f4; line-height:1.45; }
+.plot-table td { padding:7px 10px; vertical-align:top; border-bottom:1px solid #eef0f4; line-height:1.5; }
 .plot-table tr:nth-child(even) td { background:#f7f9ff; }
-.plot-table .tag-all { background:#e8f5e9; color:#1b5e20; font-weight:700; font-size:9.5px; padding:2px 7px; border-radius:10px; display:inline-block; }
-.plot-table .tag-sel { background:#e3f2fd; color:#0d47a1; font-weight:700; font-size:9.5px; padding:2px 7px; border-radius:10px; display:inline-block; }
-.plot-table .note-red { color:#c62828; font-size:9.5px; font-weight:600; }
-.plot-section-title {
-  background:#f0f4fa; padding:6px 10px;
-  font-size:10px; font-weight:800; color:#004896;
-  border-left:4px solid #7FCA3F; margin-bottom:2px;
-}
-
-/* QUESTION CARDS */
-.q-block { margin-bottom:8px; }
-.q-topic {
-  display:inline-block; background:#7FCA3F; color:#fff;
-  font-size:9.5px; font-weight:800; padding:3px 10px; border-radius:4px;
-  margin-bottom:6px; letter-spacing:0.5px;
-}
-.q-topic.blue { background:#004896; }
-.q-topic.teal { background:#009A66; }
-.q-topic.orange { background:#e65100; }
-.q-item {
-  background:#fafbff; border-radius:8px; padding:8px 11px;
-  border-left:3px solid #004896; margin-bottom:5px; font-size:11px; line-height:1.55;
-}
-.q-item strong { color:#004896; font-weight:700; }
-.q-item .q-intent { font-size:10px; color:#777; margin-top:3px; font-style:italic; }
 
 /* COLLECTION */
 .collect-row { display:grid; grid-template-columns:1fr 1fr; gap:8px; }
@@ -190,7 +180,6 @@ body {
   font-family:'Courier New',monospace; font-size:9.5px;
   padding:2px 6px; border-radius:4px; margin:1px 0; line-height:1.8;
 }
-.collect-note { margin-top:7px; font-size:10px; color:#666; line-height:1.5; }
 
 /* FOOTER */
 .footer {
@@ -200,6 +189,10 @@ body {
 .footer-left { color:rgba(255,255,255,0.65); font-size:10px; line-height:1.7; }
 .footer-left strong { color:#7FCA3F; font-size:11px; }
 .footer-logo img { height:22px; opacity:0.9; }
+
+/* row card */
+.step-row { display:flex; align-items:flex-start; gap:8px; background:#fff; border-radius:7px; padding:8px 10px; margin-bottom:6px; font-size:11px; line-height:1.5; }
+.step-row:last-child { margin-bottom:0; }
 </style>
 </head>
 <body>
@@ -213,16 +206,16 @@ body {
       <div class="campaign-tag">Communication Campaign 2026</div>
     </div>
     <div class="header-hero">
-      <div class="product-label">Cadrasia NPD</div>
-      <div class="product-name">CADRASIA<br><span>Interview Guideline</span></div>
-      <div class="header-desc">แนวทางการเก็บ Testimonial ภาพนิ่ง &amp; VDO สำหรับทีม TMD x MDO</div>
+      <div class="product-label">Cadrasia NPD — MDO &amp; TMD</div>
+      <div class="product-name">CADRASIA<br><span>Field Guide</span></div>
+      <div class="header-desc">คู่มือสนาม: การถ่ายภาพ สัมภาษณ์ และส่งไฟล์ สำหรับ Massive Trial 2026</div>
     </div>
   </div>
   <div class="header-accent">
-    <div class="accent-left">&#x1F3C6; รางวัลสำหรับทีมที่ดีที่สุด</div>
+    <div class="accent-left">&#x1F3C6; ทุกแปลงมีสิทธิ์ได้รับรางวัลเท่ากัน — รางวัลจากกระบวนการที่ถูกต้องและครบถ้วน</div>
     <div class="reward-chips">
-      <div class="reward-chip">&#x1F947; 5,000 บาท</div>
-      <div class="reward-chip">&#x1F948; 3,000 บาท</div>
+      <div class="reward-chip">&#x1F947; 5,000 &#x0E3F;</div>
+      <div class="reward-chip">&#x1F948; 3,000 &#x0E3F;</div>
     </div>
   </div>
 </div>
@@ -231,150 +224,348 @@ body {
 <!-- OBJECTIVE -->
 <div class="section">
   <div class="sec-title">วัตถุประสงค์หลัก</div>
-  <div class="obj-row">
-    <div class="obj-card"><div class="obj-icon">&#x1F33E;</div><div class="obj-label">ยืนยัน RTB<br>ประสิทธิภาพ Cadrasia</div></div>
-    <div class="obj-card"><div class="obj-icon">&#x1F3AC;</div><div class="obj-label">เก็บ Testimonial<br>10-14 &amp; 45-60 DAA</div></div>
-    <div class="obj-card"><div class="obj-icon">&#x1F4CA;</div><div class="obj-label">วางแผน<br>กลยุทธ์การตลาด</div></div>
+  <div style="display:grid; grid-template-columns:1fr 1fr 1fr; gap:7px; margin-bottom:9px;">
+    <div style="background:linear-gradient(145deg,#f0f7e6,#e8f4fd); border-radius:10px; padding:10px 8px; text-align:center; border-top:3px solid #7FCA3F;">
+      <div style="font-size:20px; margin-bottom:4px;">&#x1F33E;</div>
+      <div style="font-size:11px; font-weight:700; color:#004896; line-height:1.35;">ยืนยัน RTB<br>ประสิทธิภาพ Cadrasia</div>
+    </div>
+    <div style="background:linear-gradient(145deg,#f0f7e6,#e8f4fd); border-radius:10px; padding:10px 8px; text-align:center; border-top:3px solid #7FCA3F;">
+      <div style="font-size:20px; margin-bottom:4px;">&#x1F3AC;</div>
+      <div style="font-size:11px; font-weight:700; color:#004896; line-height:1.35;">เก็บ Testimonial<br>Safety &amp; Efficacy</div>
+    </div>
+    <div style="background:linear-gradient(145deg,#f0f7e6,#e8f4fd); border-radius:10px; padding:10px 8px; text-align:center; border-top:3px solid #7FCA3F;">
+      <div style="font-size:20px; margin-bottom:4px;">&#x1F4CA;</div>
+      <div style="font-size:11px; font-weight:700; color:#004896; line-height:1.35;">วางแผน<br>กลยุทธ์การตลาด</div>
+    </div>
+  </div>
+  <!-- Legend A/B -->
+  <div style="display:flex; gap:10px;">
+    <div style="background:#e8f0fb; border-radius:8px; padding:7px 14px; font-size:11px; font-weight:800; color:#004896; border-left:4px solid #004896; flex:1;">
+      <span class="tag-a">A</span> ทุกแปลง
+    </div>
+    <div style="background:#f3e8fc; border-radius:8px; padding:7px 14px; font-size:11px; font-weight:800; color:#6a1b9a; border-left:4px solid #6a1b9a; flex:1;">
+      <span class="tag-b">B</span> แปลงที่คัดเลือก (Cadrasia looks best)
+    </div>
   </div>
 </div>
 
-<!-- PLOT TYPE TABLE -->
+<!-- PLOT GUIDE -->
 <div class="section">
-  <div class="sec-title">ประเภทแปลงและสิ่งที่ต้องเก็บ</div>
-  <div class="plot-section-title">A) ทุกแปลง (All plots) — วัตถุประสงค์: เก็บข้อมูลตามความจริง</div>
-  <table class="plot-table">
-    <tr>
-      <th>ช่วงเวลา</th>
-      <th>รูปนิ่ง</th>
-      <th>วีดีโอ / Testimonial</th>
-      <th>หมายเหตุ</th>
-    </tr>
-    <tr>
-      <td><strong>Safety</strong><br>7-14 วัน</td>
-      <td>ตามชุดรูปนิ่งที่พี่พ่อแชร์</td>
-      <td>Optional: ถ่ายพิษชัดมาก<br>ถ่ายวีดีโอ โดยถามชุดคำถาม<br>หัวข้อ "Safety"</td>
-      <td class="note-red">รอบนี้ต้องทำงานกับ TMD เพื่อคัดสรรแปลง</td>
-    </tr>
-    <tr>
-      <td><strong>Efficacy</strong><br>45-60 วัน</td>
-      <td>ตามชุดรูปนิ่งที่พี่พ่อแชร์</td>
-      <td>ถ่ายวีดีโอ โดยถามชุดคำถาม<br>สำหรับ <u>ทุกแปลง</u></td>
-      <td></td>
-    </tr>
-  </table>
+  <div class="sec-title">คู่มือขั้นตอนสำหรับแต่ละแปลง</div>
 
-  <div class="plot-section-title" style="margin-top:10px;">B) แปลงที่คัดเลือก (Selected plots: Cadrasia looks best) — วัตถุประสงค์: จุดชนะ/ผลลัพธ์ดีสุด</div>
-  <table class="plot-table">
-    <tr>
-      <th>ช่วงเวลา</th>
-      <th>รูปนิ่ง</th>
-      <th>วีดีโอ / Testimonial</th>
-      <th>หมายเหตุ</th>
-    </tr>
-    <tr>
-      <td><strong>Safety</strong><br>7-14 วัน</td>
-      <td>ตามชุดรูปนิ่งที่พี่พ่อแชร์</td>
-      <td>Optional: ถ่ายพิษชัดมาก<br>ถ่าย VDO &amp; ถามชุดคำถาม "Safety"</td>
-      <td class="note-red">รอบนี้ต้องทำงานกับ TMD &amp; เป็น "แปลงหลัก" สำหรับใช้ต่อยอด Pre-launch</td>
-    </tr>
-    <tr>
-      <td><strong>Efficacy</strong><br>45-60 วัน</td>
-      <td>ตามชุดรูปนิ่งที่พี่พ่อแชร์</td>
-      <td>ถ่ายวีดีโอครบ โดยถามชุดคำถาม<br>สำหรับ <u>ทุกแปลง</u> &amp; "เฉพาะแปลงที่คัดเลือก"</td>
-      <td></td>
-    </tr>
-    <tr>
-      <td colspan="4" style="padding:5px 10px; font-size:10px; color:#666;">&#x1F4CC; ป้ายปักแปลง</td>
-    </tr>
-  </table>
+  <!-- Safety — blue block (same color as A) -->
+  <div style="background:#e8f0fb; border-radius:8px; padding:9px 12px; margin-bottom:8px; border-left:4px solid #004896;">
+    <div style="font-size:11px; font-weight:800; color:#004896; margin-bottom:7px;">
+      Safety — 7 ถึง 14 วันหลังพ่น
+      <span style="font-size:10px; font-weight:600; color:#555; margin-left:6px;">(เหมือนกันทั้ง <span class="tag-a">A</span> และ <span class="tag-b">B</span>)</span>
+    </div>
+    <div class="step-row">
+      <div class="step-blue">1</div>
+      <div><strong style="color:#004896;">ต้องทำ:</strong> ถ่ายรูปนิ่งชุด Safety — 6 ประเภท <span style="font-size:10px; color:#777;">(ดูหน้า Photo Guide)</span></div>
+    </div>
+    <div class="step-row">
+      <div class="step-orange">2</div>
+      <div>
+        <span class="opt-tag">Optional</span> ถ่ายวีดีโอสัมภาษณ์เกษตรกร<br>
+        <span style="font-size:10px; color:#555;">เฉพาะเมื่อ: พิษต่อวัชพืชชัดมาก AND พาเกษตรกรมาชมแปลงได้</span><br>
+        <span style="font-size:10px; color:#004896;">&#x2192; ชุดคำถาม หัวข้อที่ 3 (ความปลอดภัยต่อข้าว)</span>
+      </div>
+    </div>
+  </div>
+
+  <!-- Efficacy — blue block (same color as A + Safety) -->
+  <div style="background:#e8f0fb; border-radius:8px; padding:9px 12px; margin-bottom:8px; border-left:4px solid #004896;">
+    <div style="font-size:11px; font-weight:800; color:#004896; margin-bottom:7px;">
+      Efficacy — 45 ถึง 60 วันหลังพ่น
+    </div>
+    <div class="step-row">
+      <div class="step-blue">1</div>
+      <div><strong style="color:#004896;">ทำงานร่วมกับ TMD</strong> — ตรวจสอบและยืนยันแปลง</div>
+    </div>
+    <div class="step-row">
+      <div class="step-blue">2</div>
+      <div>
+        <strong style="color:#004896;">ต้องทำ:</strong> ถ่ายวีดีโอสัมภาษณ์เกษตรกร<br>
+        <span style="font-size:10px; color:#004896;">&#x2192; ชุดคำถาม หัวข้อที่ 1, 2</span>
+      </div>
+    </div>
+  </div>
+
+  <!-- B only — purple block (same color as B label) -->
+  <div style="background:#f3e8fc; border-radius:8px; padding:9px 12px; border-left:4px solid #6a1b9a;">
+    <div style="font-size:11px; font-weight:800; color:#6a1b9a; margin-bottom:7px;">
+      เพิ่มเติมสำหรับ <span class="tag-b">B</span> แปลงที่คัดเลือก เท่านั้น
+    </div>
+    <div class="step-row">
+      <div class="step-plus">+</div>
+      <div>ต่อจากข้อ 2 — ถามเพิ่ม: <strong style="color:#6a1b9a;">หัวข้อที่ 4</strong> (มั่นใจ + เน้นการบอกต่อ)</div>
+    </div>
+    <div class="step-row">
+      <div class="step-purple">3</div>
+      <div>
+        <strong style="color:#6a1b9a;">ต้องทำ:</strong> ปักป้ายแปลง<br>
+        <span style="font-size:10px; color:#555;">TMD พกป้ายไปด้วยตลอด — ถ้าแปลงไหนผ่านการคัดเลือกจะได้ปักป้ายแสดงแปลงที่คัดเลือก</span>
+      </div>
+    </div>
+  </div>
+
+  <!-- Summary table — ช่วง เป็น column ที่ 2 -->
+  <div style="margin-top:10px;">
+    <div style="background:#f0f4fa; padding:6px 10px; font-size:10px; font-weight:800; color:#004896; border-left:4px solid #7FCA3F; margin-bottom:2px;">
+      สรุป: ชุดคำถามใช้กับแปลงไหน?
+    </div>
+    <table class="plot-table">
+      <tr>
+        <th style="background:#005cb8;">ช่วง</th>
+        <th>หัวข้อ</th>
+        <th><span class="tag-a">A</span> ทุกแปลง</th>
+        <th style="background:#7b1fa2;"><span class="tag-b">B</span> แปลงคัดเลือก</th>
+      </tr>
+      <tr>
+        <td style="color:#004896; font-weight:700;">Efficacy</td>
+        <td><strong>1</strong> — ผลลัพธ์ + ประสิทธิภาพสูง</td>
+        <td>&#x2713;</td>
+        <td>&#x2713;</td>
+      </tr>
+      <tr>
+        <td style="color:#004896; font-weight:700;">Efficacy</td>
+        <td><strong>2</strong> — ขวดเดียวเอาอยู่ ไม่ต้องผสม</td>
+        <td>&#x2713;</td>
+        <td>&#x2713;</td>
+      </tr>
+      <tr>
+        <td style="color:#004896; font-weight:700;">Efficacy</td>
+        <td><strong>3</strong> — มั่นใจ + เน้นการบอกต่อ</td>
+        <td style="color:#aaa;">—</td>
+        <td style="font-weight:800; color:#6a1b9a;">B เท่านั้น</td>
+      </tr>
+      <tr>
+        <td style="color:#004896; font-weight:700;">Safety</td>
+        <td><strong>4</strong> — ความปลอดภัยต่อข้าว</td>
+        <td><span class="opt-tag">Optional</span></td>
+        <td style="font-weight:800; color:#6a1b9a;">&#x2713; ใช่</td>
+      </tr>
+    </table>
+  </div>
 </div>
 
 <!-- PHOTO GUIDE -->
 <div class="section">
-  <div class="sec-title">แนวทางการถ่ายภาพ (15-20 ภาพ / แปลง / 30 วัน)</div>
-  <div class="photo-row">
-    <div class="photo-card"><div class="photo-num">01</div><div class="photo-icon">&#x1F33F;</div><div class="photo-label">Weed Stage<br>ก่อนพ่น</div></div>
-    <div class="photo-card"><div class="photo-num">02</div><div class="photo-icon">&#x1F50D;</div><div class="photo-label">Phyto-toxic<br>Close up</div></div>
-    <div class="photo-card"><div class="photo-num">03</div><div class="photo-icon">&#x2194;&#xFE0F;</div><div class="photo-label">Side by Side<br>vs Farmer</div></div>
-    <div class="photo-card"><div class="photo-num">04</div><div class="photo-icon">&#x1F5BC;&#xFE0F;</div><div class="photo-label">Wide Shot<br>มุมกว้าง</div></div>
-    <div class="photo-card"><div class="photo-num">05</div><div class="photo-icon">&#x1F52C;</div><div class="photo-label">Close up<br>มุมซูมใกล้</div></div>
-    <div class="photo-card"><div class="photo-num">06</div><div class="photo-icon">&#x1F4F9;</div><div class="photo-label">VDO Feedback<br>เกษตรกร</div></div>
+  <div class="sec-title">Photo Reference Guide — ชุดรูปนิ่งที่ต้องถ่าย (ทุกแปลง)</div>
+  <div class="photo-grid">
+    <div class="photo-card">
+      <div class="photo-num">01</div>
+      <div class="photo-icon">&#x1F33F;</div>
+      <div class="photo-label">Weed Stage</div>
+      <div class="photo-sub">ถ่ายสภาพหญ้าก่อน/วันที่พ่น เป็น Baseline</div>
+    </div>
+    <div class="photo-card">
+      <div class="photo-num">02</div>
+      <div class="photo-icon">&#x1F50D;</div>
+      <div class="photo-label">Phyto-toxic Close Up</div>
+      <div class="photo-sub">ซูมใกล้อาการพิษต่อวัชพืชหลังพ่น</div>
+    </div>
+    <div class="photo-card">
+      <div class="photo-num">03</div>
+      <div class="photo-icon">&#x2194;&#xFE0F;</div>
+      <div class="photo-label">Side by Side</div>
+      <div class="photo-sub">เทียบข้าง Cadrasia vs Farmer Practice</div>
+    </div>
+    <div class="photo-card">
+      <div class="photo-num">04</div>
+      <div class="photo-icon">&#x1F5BC;&#xFE0F;</div>
+      <div class="photo-label">Wide Shot</div>
+      <div class="photo-sub">ภาพรวมทั้งแปลง แสดงพื้นที่ทั้งหมด</div>
+    </div>
+    <div class="photo-card">
+      <div class="photo-num">05</div>
+      <div class="photo-icon">&#x1F52C;</div>
+      <div class="photo-label">Close Up</div>
+      <div class="photo-sub">โคลสอัพต้นข้าว เห็นหญ้าถูกจัดแต่ข้าวปลอดภัย</div>
+    </div>
+    <div class="photo-card">
+      <div class="photo-num">06</div>
+      <div class="photo-icon">&#x1F6E1;&#xFE0F;</div>
+      <div class="photo-label">Safety Comparison</div>
+      <div class="photo-sub">Crop Safety: Cadrasia / ยาเกษตรกร / ไม่ใช้ยา</div>
+    </div>
   </div>
-  <div class="alert-box">&#x26A0;&#xFE0F; <strong>สำคัญ:</strong> ถ่าย <u>มุมเดิม ตำแหน่งเดิม ระยะเดิม</u> ทุกครั้ง &nbsp;|&nbsp; แนวนอนเท่านั้น &nbsp;|&nbsp; ปักหมุดจุดยืนครั้งแรก</div>
-</div>
+  <div class="alert-box">&#x26A0;&#xFE0F; <strong>สำคัญ:</strong> ถ่าย <u>มุมเดิม ตำแหน่งเดิม ระยะเดิม</u> ทุกครั้ง &nbsp;|&nbsp; แนวนอนเท่านั้น &nbsp;|&nbsp; ปักหมุดจุดยืนครั้งแรก &nbsp;|&nbsp; เก็บภาพ Insert (ต้นข้าว/แปลง/ผลิตภัณฑ์) เพิ่มเสมอ</div>
 
-<!-- TIMELINE -->
-<div class="section">
-  <div class="sec-title">Timeline การเก็บภาพ 30 วัน</div>
-  <div class="tl-wrap">
-    <div class="tl-item"><div class="tl-node hi">ก่อน</div><div class="tl-label">ก่อนพ่น</div></div>
-    <div class="tl-item"><div class="tl-node">6</div><div class="tl-label">6 วัน</div></div>
-    <div class="tl-item"><div class="tl-node">8</div><div class="tl-label">8 วัน</div></div>
-    <div class="tl-item"><div class="tl-node">15</div><div class="tl-label">15 วัน</div></div>
-    <div class="tl-item"><div class="tl-node">20</div><div class="tl-label">20 วัน</div></div>
-    <div class="tl-item"><div class="tl-node hi">30</div><div class="tl-label">30 วัน</div></div>
+  <div style="margin-top:10px;">
+    <div style="font-size:10px; font-weight:700; color:#004896; margin-bottom:7px;">&#x1F4C5; Timeline 30 วัน</div>
+    <div class="tl-wrap">
+      <div class="tl-item"><div class="tl-node hi">ก่อน</div><div class="tl-label">ก่อนพ่น</div></div>
+      <div class="tl-item"><div class="tl-node">6</div><div class="tl-label">6 วัน</div></div>
+      <div class="tl-item"><div class="tl-node">8</div><div class="tl-label">8 วัน</div></div>
+      <div class="tl-item"><div class="tl-node">15</div><div class="tl-label">15 วัน</div></div>
+      <div class="tl-item"><div class="tl-node">20</div><div class="tl-label">20 วัน</div></div>
+      <div class="tl-item"><div class="tl-node hi">30</div><div class="tl-label">30 วัน</div></div>
+    </div>
+  </div>
+
+  <div style="margin-top:10px;">
+    <div style="font-size:10px; font-weight:700; color:#004896; margin-bottom:7px;">&#x1F3AC; แนวทางการถ่ายวีดีโอ</div>
+    <div class="do-dont">
+      <div class="do-col">
+        <div class="col-title">&#x2705; DO — แนะนำ</div>
+        <div class="do-item"><span style="color:#43a047; font-size:12px; flex-shrink:0;">&#x2022;</span><span>ให้เกษตรกรพูดตอบโต้กับผู้สัมภาษณ์ <strong>ไม่มองตรงกล้อง</strong></span></div>
+        <div class="do-item"><span style="color:#43a047; font-size:12px; flex-shrink:0;">&#x2022;</span><span>ใช้บุคคลที่ 3 เป็นผู้บันทึกภาพ <strong>อย่าตรงกว้าง</strong></span></div>
+        <div class="do-item"><span style="color:#43a047; font-size:12px; flex-shrink:0;">&#x2022;</span><span>เลือกแบบ <strong>นั่งคุย</strong> หรือ <strong>เดินคุย</strong> ตามธรรมชาติ</span></div>
+        <div class="do-item"><span style="color:#43a047; font-size:12px; flex-shrink:0;">&#x2022;</span><span>เก็บภาพ Insert (ต้นข้าว / แปลง / ผลิตภัณฑ์) เพิ่มเสมอ</span></div>
+        <div class="do-item"><span style="color:#43a047; font-size:12px; flex-shrink:0;">&#x2022;</span><span>ตรวจสอบโฟกัสและเสียงก่อน-ระหว่าง-หลังถ่าย (SONY ICD-PX470)</span></div>
+      </div>
+      <div class="dont-col">
+        <div class="col-title">&#x274C; DON'T — หลีกเลี่ยง</div>
+        <div class="do-item"><span style="color:#ef5350; font-size:12px; flex-shrink:0;">&#x2022;</span><span>ให้ผู้ถูกสัมภาษณ์พูดหน้ากล้องโดยตรง (ทำให้เกร็ง)</span></div>
+        <div class="do-item"><span style="color:#ef5350; font-size:12px; flex-shrink:0;">&#x2022;</span><span>ถ่ายย้อนแสง — แสงอาทิตย์ต้องอยู่ด้านหน้าเสมอ</span></div>
+        <div class="do-item"><span style="color:#ef5350; font-size:12px; flex-shrink:0;">&#x2022;</span><span>ซูมเกิน x2 — ขยับกล้องเข้าใกล้แทน</span></div>
+        <div class="do-item"><span style="color:#ef5350; font-size:12px; flex-shrink:0;">&#x2022;</span><span>ลืมตรวจสอบเสียง — แก้ไขไม่ได้หลังถ่าย</span></div>
+      </div>
+    </div>
   </div>
 </div>
 
 <!-- INTERVIEW QUESTIONS -->
 <div class="section">
-  <div class="sec-title">ชุดคำถาม Interview แยก 4 Key Messages</div>
+  <div class="sec-title">ชุดคำถาม Interview — แนวทางสัมภาษณ์</div>
 
-  <div class="q-block">
-    <div class="q-topic">&#x1F33E; ผลลัพธ์ + ประสิทธิภาพสูง</div>
-    <div class="q-item"><strong>Q1:</strong> "แนะนำตัวหน่อยครับ (ชื่อ...นามสกุล...จังหวัด...)"<br><span class="q-intent">เพื่อให้เกษตรกรแนะนำตัวก่อน ตัดออกในตัดต่อ แทนด้วย text</span></div>
-    <div class="q-item"><strong>Q2:</strong> "หลังจากพ่นตัวนี้ (คาดราเซีย) ผลยังไงบ้างครับ?" &nbsp;/&nbsp; "แล้วปกติที่แปลง...มีปัญหาหญ้าอะไรบ้าง?"<br><span class="q-intent">ให้เกษตรกรเอ่ยชื่อหญ้าออกมา แล้วถามว่า Cadrasia ได้ผลกับหญ้าชนิดนั้นอย่างไร เช่น ตายเรียบเลย? เอาอยู่ใช่มั้ย?</span></div>
+  <div class="intro-box">
+    <strong>เริ่มทุกครั้ง:</strong> "แนะนำตัวหน่อยครับ/ค่ะ — ชื่อ... นามสกุล... เป็นเกษตรกรจากจังหวัด..." ถ้าไปติดตามผล ให้ถามทวนว่า <strong>"ใช้ตัวนี้มากี่วันแล้วครับ/ค่ะ?"</strong> เพื่อให้เกษตรกรบอกจำนวนวันก่อนพูดถึงผลลัพธ์
   </div>
 
+  <!-- Q1 — blue (A+B, Efficacy) -->
   <div class="q-block">
-    <div class="q-topic blue">&#x1F6E1;&#xFE0F; ไม่ส่งผลกระทบกับข้าว (Safety)</div>
-    <div class="q-item"><strong>Q1:</strong> "คาดราเซียได้ผลดีกับหญ้าแบบนี้ แล้วต้นข้าว เป็นอะไรมั้ยครับ?"<br><span class="q-intent">ให้ผู้ถูกถามตอบว่าต้นข้าวไม่ได้รับผลกระทบเลย</span></div>
-    <div class="q-item"><strong>Q2:</strong> "ปกติเวลาใช้ยาบางตัว ข้าวจะแดง จะงัน ข้าวอาน บ้าง แล้วคาดราเซียละ มีผลอะไรกับข้าวมั้ย?"<br><span class="q-intent">ให้ผู้ถูกถามบอกว่าข้าวที่ใช้ Cadrasia ไม่เกิดอาการเหล่านั้น</span></div>
-    <div class="q-item"><strong>Q3:</strong> "หญ้าก็จัดการอยู่หมัด แถมต้นข้าวก็ปลอดภัย แบบนี้คิดว่าผลผลิตปีนี้จะโอเคขึ้นมั้ย?"</div>
+    <div class="q-topic-bar blue">
+      <span>หัวข้อที่ 1 — ผลลัพธ์ + ประสิทธิภาพสูง</span>
+      <span class="scope"><span class="tag-a">A</span> <span class="tag-b">B</span> ทุกแปลง | Efficacy 45-60 วัน</span>
+    </div>
+    <div class="q-body">
+      <div class="q-item">
+        <div class="q-num-blue">1</div>
+        <div>
+          "แล้วปกติที่แปลง <em>[ชื่อ]</em> มีปัญหาหญ้าทุกอะไรบ้าง?"
+          <div class="q-hint">&gt;&gt; ให้เกษตรกรเอ่ยชื่อหญ้า แล้วเสริมว่า Cadrasia จัดการได้อย่างไร เช่น "กำจัดเรียบเลยใช่มั้ย?"</div>
+          <div class="q-extra">&#x1F4A1; เพิ่ม: "ก่อนหน้าที่จะเจอคาดราเซีย <em>[ชื่อ]</em> กำจัดหญ้ายังไง?" ให้เกษตรกรเปรียบเทียบแนวทางเดิม</div>
+        </div>
+      </div>
+      <div class="q-item">
+        <div class="q-num-blue">2</div>
+        <div>
+          "หลังจากพ่นตัวนี้ ผลยังไงบ้างครับ/ค่ะ?"
+          <div class="q-hint">&gt;&gt; ให้เกษตรกรบอกผลลัพธ์โดยตรงและความรู้สึกต่อความเหมาะสม</div>
+        </div>
+      </div>
+      <div class="q-item">
+        <div class="q-num-blue">3</div>
+        <div>
+          "หลังจากพ่นตัวนี้ ผลยังไงบ้างครับ/คะ? คิดว่าเหมาะกับแปลงมั้ย?"
+          <div class="q-hint">&gt;&gt; ให้เกษตรกรบอกผลลัพธ์โดยตรงและความรู้สึกต่อความเหมาะสม</div>
+        </div>
+      </div>
+    </div>
   </div>
 
+  <!-- Q2 — blue (A+B, Efficacy) -->
   <div class="q-block">
-    <div class="q-topic teal">&#x1F4E6; ขวดเดียวเอาอยู่</div>
-    <div class="q-item"><strong>Q1:</strong> "ปกติช่วงนี้คุม-ฆ่าหญ้ายังไง?" &nbsp;→&nbsp; "แล้วนี่ได้ลองใช้ คาดราเซีย ต้องผสมอะไรเพิ่มมั้ย?"<br><span class="q-intent">ให้บอกถึงความสะดวกและประหยัดเวลา ไม่ต้องผสมหลายตัว</span></div>
-    <div class="q-item"><strong>Q2:</strong> "แบบนี้ตอบโจทย์การคุมฆ่าหญ้าขึ้นมั้ย? ไม่ต้องผสมอะไรยุ่งยาก ไม่ต้องตามแก้เวลาข้าวอาน ข้าวแดง ข้าวงัน"</div>
+    <div class="q-topic-bar blue">
+      <span>หัวข้อที่ 2 — ขวดเดียวเอาอยู่ ไม่ต้องผสม</span>
+      <span class="scope"><span class="tag-a">A</span> <span class="tag-b">B</span> ทุกแปลง | Efficacy 45-60 วัน</span>
+    </div>
+    <div class="q-body">
+      <div class="q-item">
+        <div class="q-num-blue">1</div>
+        <div>
+          "ได้ลองใช้คาดราเซียแล้ว ต้องผสมอะไรเพิ่มมั้ย?"
+          <div class="q-hint">&gt;&gt; ให้ผู้ถูกถามบอกถึงความสะดวกและประหยัดเวลา</div>
+          <div class="q-extra"><strong>คำถามเสริม:</strong> "ฉีดตัวนี้ตัวเดียวจบเลย ไม่ต้องมาตามแก้อะไรใช่มั้ย?" — เน้นสูตรตัวเดียวจบ ลดต้นทุนยุ่งยาก</div>
+        </div>
+      </div>
+      <div class="q-item">
+        <div class="q-num-blue">2</div>
+        <div>
+          "แบบนี้ตอบโจทย์การคุมฆ่าหญ้าขึ้นมั้ย? ไม่ต้องผสมอะไรยุ่งยาก ไม่ต้องตามแก้เวลาข้าวอาน ข้าวแดง ข้าวงัน?"
+          <div class="q-hint">&gt;&gt; ให้บอกถึงความสะดวก ประหยัดเวลา ลดต้นทุนแฝง และลดความยุ่งยากในการทำนา</div>
+        </div>
+      </div>
+    </div>
   </div>
 
+  <!-- Q3 — Safety (A optional, B ใช่) — moved up from Q4 -->
+  <div class="q-block">
+    <div class="q-topic-bar blue" style="background:#1565c0;">
+      <span>หัวข้อที่ 3 — ความปลอดภัยต่อข้าว</span>
+      <span class="scope"><span class="tag-a">A</span> Optional &nbsp;|&nbsp; <span class="tag-b">B</span> ใช่ &nbsp;|&nbsp; Safety 7-14 วัน</span>
+    </div>
+    <div class="q-body">
+      <div class="q-item">
+        <div class="q-num-blue">1</div>
+        <div>
+          "คาดราเซียได้ผลดีกับหญ้าแบบนี้ แต่ต้นข้าวเป็นอะไรมั้ยครับ/ค่ะ?"
+          <div class="q-hint">&gt;&gt; ถามนำด้วยชื่ออาการจากยาอื่น เพื่อให้เกษตรกรยืนยันว่า Cadrasia ไม่ทำให้ข้าวเกิดอาการเหล่านั้น</div>
+        </div>
+      </div>
+      <div class="q-item">
+        <div class="q-num-blue">2</div>
+        <div>
+          "หญ้าจัดการอยู่หมัด แถมต้นข้าวก็ปลอดภัย แบบนี้คิดว่าผลผลิตปีนี้จะโอเคขึ้นมั้ย?"
+          <div class="q-hint">&gt;&gt; สื่อสารความหวังเรื่องรายได้ — หญ้าถูกกำจัดและข้าวยืนต้นสมบูรณ์ โตเต็มที่ ผลผลิตจะดีขึ้น</div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Q4 — B only, Efficacy — ต่อจากวีดีโอสัมภาษณ์เกษตรกร -->
   <div class="q-block" style="margin-bottom:0;">
-    <div class="q-topic orange">&#x1F91D; มั่นใจ + บอกต่อ</div>
-    <div class="q-item"><strong>Q1:</strong> "หลังจากเปลี่ยนมาใช้คาดราเซีย รู้สึกว่าคุม-ฆ่าหญ้าได้ดีกว่าที่เคยใช้มั้ย?"</div>
-    <div class="q-item"><strong>Q2:</strong> "เห็นผลของแปลงนี้แล้ว ทำนารอบหน้า...จะใช้คาดราเซียอีกมั้ย?"<br><span class="q-intent">แพนกล้องให้เห็นแปลงข้าวสวยงามไม่มีวัชพืชไปพร้อมกัน</span></div>
-    <div class="q-item"><strong>Q3:</strong> "สุดท้ายถ้าจะป้ายยา (บอกต่อ) เพื่อนๆ คนอื่น จะบอกว่ายังไง?"</div>
+    <div class="q-topic-bar purple">
+      <span>หัวข้อที่ 4 — มั่นใจ + เน้นการบอกต่อ</span>
+      <span class="scope"><span class="tag-b">B</span> แปลงคัดเลือกเท่านั้น | Efficacy 45-60 วัน</span>
+    </div>
+    <div class="q-body">
+      <div style="background:#f3e8fc; border-radius:6px; padding:6px 10px; font-size:10px; color:#6a1b9a; font-weight:700; margin-bottom:7px;">
+        &#x1F4CC; ต่อจากการถ่ายวีดีโอสัมภาษณ์เกษตรกร (หัวข้อ 1 และ 2) — ใช้เฉพาะแปลงที่คัดเลือก
+      </div>
+      <div class="q-item" style="border-left-color:#ce93d8;">
+        <div class="q-num-purple">1</div>
+        <div>
+          "หลังจากเปลี่ยนมาใช้คาดราเซีย รู้สึกว่าคุม-ฆ่าหญ้าได้ดีกว่าที่เคยใช้มั้ย?"
+          <div class="q-hint">&gt;&gt; ให้เกษตรกรเปรียบเทียบ Cadrasia กับยาเดิมว่าดีกว่าอย่างไร</div>
+        </div>
+      </div>
+      <div class="q-item" style="border-left-color:#ce93d8;">
+        <div class="q-num-purple">2</div>
+        <div>
+          "เห็นผลของแปลงนี้แล้ว ทำนารอบหน้าจะใช้คาดราเซียอีกมั้ย?"
+          <div class="q-hint">&gt;&gt; แพนกล้องให้เห็นแปลงข้าวสวยงามที่ไม่มีวัชพืชและต้นข้าวยืนต้นสวยงาม</div>
+        </div>
+      </div>
+      <div class="q-item" style="border-left-color:#ce93d8;">
+        <div class="q-num-purple">3</div>
+        <div>
+          "สุดท้าย ถ้าจะบอกต่อเพื่อนๆ คนอื่น จะบอกว่ายังไง?"
+          <div class="q-hint">&gt;&gt; เปิดโอกาสให้เกษตรกรชักชวนคนที่ยังไม่ได้ลองให้หันมาใช้ Cadrasia</div>
+        </div>
+      </div>
+    </div>
   </div>
 </div>
 
-<!-- FILMING TIPS -->
-<div class="section">
-  <div class="sec-title">เทคนิคการถ่ายทำ VDO</div>
-  <div class="film-grid">
-    <div class="film-item"><div class="film-ico">&#x2705;</div><div>ใช้บุคคลที่ 3 ถ่าย ให้เกษตรกรพูดคุยกับผู้สัมภาษณ์ตามธรรมชาติ</div></div>
-    <div class="film-item"><div class="film-ico">&#x2705;</div><div>เลือก <strong>นั่งพูดคุย</strong> หรือ <strong>เดินพูดคุย</strong> ตามธรรมชาติของผู้ถูกถาม</div></div>
-    <div class="film-item warn"><div class="film-ico">&#x274C;</div><div>หลีกเลี่ยงให้พูดตรงหน้ากล้อง เพราะทำให้เกร็ง</div></div>
-    <div class="film-item"><div class="film-ico">&#x1F3D9;&#xFE0F;</div><div>เช็คเสียง SONY ICD-PX470 ก่อน/ระหว่าง/หลังถ่ายทุกครั้ง</div></div>
-    <div class="film-item warn"><div class="film-ico">&#x1F4A1;</div><div>ระวัง <strong>ย้อนแสง</strong> อย่าให้แดดอยู่หลังผู้ถูกสัมภาษณ์</div></div>
-    <div class="film-item warn"><div class="film-ico">&#x1F52D;</div><div>เช็คโฟกัสตลอด ขยับกล้องเข้าใกล้แทนซูม ห้ามซูมเกิน x2</div></div>
-  </div>
-</div>
-
-<!-- COLLECTION -->
+<!-- COLLECTION — ท้ายสุด ตาม feedback -->
 <div class="section" style="border-bottom:none;">
   <div class="sec-title">การส่งไฟล์ VDO Collection</div>
   <div class="collect-row">
     <div class="collect-card">
-      <div class="collect-title">&#x1F4C1; ตั้งชื่อ Folder</div>
-      <span class="code-tag">MDO Name_จังหวัด_วันที่ปลูก</span>
+      <div class="collect-title">&#x1F4C1; ลิงก์อัปโหลด</div>
+      <div style="font-size:10.5px; color:#004896; font-weight:700;">เข้าผ่าน VDO Testimonial</div>
+      <div style="font-size:10px; color:#666; margin-top:3px;">(ติดต่อจูนหากเข้าไม่ได้ พร้อมแจ้งอีเมล)</div>
     </div>
     <div class="collect-card">
-      <div class="collect-title">&#x1F4C4; ตั้งชื่อไฟล์</div>
-      <span class="code-tag">จังหวัด_วันที่_Safety</span><br>
-      <span class="code-tag">จังหวัด_วันที่_Efficacy</span>
+      <div class="collect-title">&#x1F4C4; ตั้งชื่อ Folder &amp; ไฟล์</div>
+      <span class="code-tag">[MDO Name]_[จังหวัด]_[วันที่ปลูก]</span><br>
+      <span class="code-tag">[จังหวัด]_[วันที่]_Safety</span><br>
+      <span class="code-tag">[จังหวัด]_[วันที่]_Efficacy</span>
     </div>
   </div>
-  <div class="collect-note">&#x1F4CC; ไม่สามารถเข้าถึง Link ได้ ติดต่อจูน พร้อมแจ้ง Email เพื่อขอสิทธิ์เข้าถึงไฟล์</div>
 </div>
 
 <!-- FOOTER -->
